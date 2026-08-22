@@ -1,0 +1,51 @@
+# Entorno y credenciales
+.env
+*.env.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# Modelos y pesos pesados (evitar subir gigabytes a git)
+*.h5
+*.hdf5
+*.pt
+*.pth
+*.onnx
+*.pkl
+
+# Datos de pacientes y datasets locales pesados
+data/raw/
+data/processed/
+*.mat
+*.csv.gz
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo

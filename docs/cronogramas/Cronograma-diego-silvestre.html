@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Cronograma Diego Silvestre</title>
+<style>
+  @page { size: A4; margin: 2cm; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 11px; line-height: 1.5; color: #111; max-width: 900px; margin: auto; padding: 20px; }
+  h1 { font-size: 18px; color: #1a237e; border-bottom: 2px solid #1a237e; padding-bottom: 6px; }
+  h2 { font-size: 15px; color: #283593; margin-top: 20px; border-bottom: 1px solid #c5cae9; padding-bottom: 4px; }
+  h3 { font-size: 13px; color: #303f9f; margin-top: 14px; }
+  table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 10px; }
+  th { background: #1a237e; color: white; padding: 5px 8px; text-align: left; }
+  td { padding: 4px 8px; border: 1px solid #c5cae9; vertical-align: top; }
+  tr:nth-child(even) { background: #e8eaf6; }
+  strong { color: #1a237e; }
+  hr { border: none; border-top: 1px solid #c5cae9; margin: 16px 0; }
+  blockquote { border-left: 4px solid #1a237e; margin: 8px 0; padding: 4px 12px; background: #e8eaf6; }
+  @media print {
+    body { font-size: 10px; }
+    h1 { font-size: 16px; }
+    h2 { font-size: 13px; }
+    h3 { font-size: 11px; }
+    table { font-size: 9px; }
+    .no-print { display: none; }
+  }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="no-print" style="background:#fff3cd;padding:10px;border:1px solid #ffc107;border-radius:4px;margin-bottom:16px;font-size:12px;">
+  <strong>Para guardar como PDF:</strong> Presiona <kbd>Ctrl+P</kbd> → Selecciona "Guardar como PDF" → Clic en Guardar
+</div>
+<h1>Cronograma_Diego_Silvestre - 1INF42-2026-2</h1>
+<p><strong>Tema</strong>: Clasificación de queratocono mediante modelos de aprendizaje profundo aplicados a mapas de rigidez corneal reconstruidos a partir de biomarcadores de velocidad de onda<br />
+<strong>Metodología de trabajo</strong>: Avances semanales con objetivos claros y fechas de entrega definidas<br />
+<strong>Disponibilidad</strong>: 6-8 h/semana → Viernes ~2h | Sábado noche ~2h | Domingo ~3-4h  </p>
+<hr />
+
+<!-- DASHBOARD STATS -->
+<div class="no-print" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:16px 0;">
+  <div style="background:#fafafa;border:1px solid #e0e0e0;border-top:4px solid #1a237e;padding:12px;text-align:center;border-radius:8px;">
+    <div style="font-size:24px;font-weight:bold;color:#1a237e;" id="statTotal">39</div>
+    <div style="font-size:11px;color:#616161;">TOTAL TAREAS</div>
+  </div>
+  <div style="background:#fafafa;border:1px solid #e0e0e0;border-top:4px solid #2e7d32;padding:12px;text-align:center;border-radius:8px;">
+    <div style="font-size:24px;font-weight:bold;color:#2e7d32;" id="statDone">0</div>
+    <div style="font-size:11px;color:#616161;">COMPLETADAS</div>
+  </div>
+  <div style="background:#fafafa;border:1px solid #e0e0e0;border-top:4px solid #f57f17;padding:12px;text-align:center;border-radius:8px;">
+    <div style="font-size:24px;font-weight:bold;color:#f57f17;" id="statPending">39</div>
+    <div style="font-size:11px;color:#616161;">PENDIENTES</div>
+  </div>
+  <div style="background:#fafafa;border:1px solid #e0e0e0;border-top:4px solid #6a1b9a;padding:12px;text-align:center;border-radius:8px;">
+    <div style="font-size:24px;font-weight:bold;color:#6a1b9a;" id="statPct">0%</div>
+    <div style="font-size:11px;color:#616161;">AVANCE GLOBAL</div>
+  </div>
+</div>
+
+<!-- CHARTS CONTAINER -->
+<div class="no-print" style="display:grid;grid-template-columns:1fr 1.2fr;gap:16px;margin:20px 0;background:#fafafa;padding:16px;border-radius:8px;border:1px solid #e0e0e0;">
+  <div style="background:#fff;padding:12px;border-radius:6px;border:1px solid #e0e0e0;text-align:center;">
+    <h4 style="margin:0 0 10px 0;color:#1a237e;font-size:12px;">📊 Diagrama de Pastel de Tareas</h4>
+    <div style="position:relative;height:180px;max-width:240px;margin:auto;">
+      <canvas id="pieChartCanvas"></canvas>
+    </div>
+  </div>
+  <div style="background:#fff;padding:12px;border-radius:6px;border:1px solid #e0e0e0;">
+    <h4 style="margin:0 0 10px 0;color:#1a237e;font-size:12px;">📦 Progreso por Entregable Formal</h4>
+    <div style="margin-bottom:10px;">
+      <div style="display:flex;justify-content:space-between;font-size:11px;font-weight:600;">
+        <span>E1: Problemática y Estado del Arte (Sem 1-4)</span>
+        <span id="e1Txt">0%</span>
+      </div>
+      <div style="background:#e0e0e0;height:8px;border-radius:4px;overflow:hidden;margin-top:3px;">
+        <div id="e1Bar" style="background:#1a237e;width:0%;height:100%;transition:width 0.3s;"></div>
+      </div>
+    </div>
+    <div style="margin-bottom:10px;">
+      <div style="display:flex;justify-content:space-between;font-size:11px;font-weight:600;">
+        <span>E2: Marco Teórico y Métodos (Sem 5-8)</span>
+        <span id="e2Txt">0%</span>
+      </div>
+      <div style="background:#e0e0e0;height:8px;border-radius:4px;overflow:hidden;margin-top:3px;">
+        <div id="e2Bar" style="background:#303f9f;width:0%;height:100%;transition:width 0.3s;"></div>
+      </div>
+    </div>
+    <div style="margin-bottom:10px;">
+      <div style="display:flex;justify-content:space-between;font-size:11px;font-weight:600;">
+        <span>E3: Plan Proyecto y Avance (Sem 9-13)</span>
+        <span id="e3Txt">0%</span>
+      </div>
+      <div style="background:#e0e0e0;height:8px;border-radius:4px;overflow:hidden;margin-top:3px;">
+        <div id="e3Bar" style="background:#2e7d32;width:0%;height:100%;transition:width 0.3s;"></div>
+      </div>
+    </div>
+    <div style="font-size:11px;color:#616161;margin-top:8px;">
+      📌 <em>Checklist interactivo: Haz clic en las casillas de las tablas semanales abajo para marcar tareas y actualizar el gráfico.</em>
+    </div>
+  </div>
+</div>
+
+<h2>Cronograma del Curso</h2>
+<table>
+<thead>
+<tr>
+<th>Sem.</th>
+<th>Fecha Inicio</th>
+<th>Fecha Fin</th>
+<th>Actividad de Clase</th>
+<th>Avances / Contenido de la Semana</th>
+<th>Entregable Formal</th>
+<th>Envío</th>
+<th>Revisor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>17-ago</td>
+<td>23-ago</td>
+<td>Explicación del curso y cronograma</td>
+<td><strong>SEMANA 1</strong> — Redactar cronograma del ciclo. Leer artículos introductorios sobre queratocono. Definir pregunta de investigación inicial.</td>
+<td>Cronograma de trabajo del curso</td>
+<td>Vie 22-ago antes del mediodía → asesor</td>
+<td>Asesor</td>
+</tr>
+<tr>
+<td>2</td>
+<td>24-ago</td>
+<td>30-ago</td>
+<td>Repaso sobre estado del arte y problemática</td>
+<td><strong>SEMANA 2</strong> — Árbol de problemas. Definir 3 preguntas de revisión sistemática. Seleccionar bases de datos (IEEE Xplore + Scopus). Construir cadenas de búsqueda booleanas.</td>
+<td>Cronograma de trabajo del curso</td>
+<td>Lun 25-ago antes del mediodía → asesor envía al profesor</td>
+<td>Profesor del curso</td>
+</tr>
+<tr>
+<td>3</td>
+<td>31-ago</td>
+<td>06-sep</td>
+<td>Repaso sobre objetivos, resultados, IOVs</td>
+<td><strong>SEMANA 3</strong> — Aplicar protocolo PRISMA para filtrar artículos relevantes. Completar formulario de extracción (mínimo 15 artículos). Redactar objetivos general y específicos. Definir Indicadores Objetivamente Verificables (IOV) por resultado. Redactar análisis comparativo de soluciones similares.</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>4</td>
+<td>07-sep</td>
+<td>13-sep</td>
+<td>Exposición 1</td>
+<td><strong>SEMANA 4</strong> — Integrar E1 completo: problemática + estado del arte + objetivos + resultados esperados + cronograma. Adjuntar formulario de extracción como Anexo A. Revisión norma APA 7.ª ed.</td>
+<td><strong>E1</strong>: Problemática, estado del arte, objetivos (general y específicos), resultados esperados (IOV) y cronograma</td>
+<td>Vie 12-sep antes del mediodía → asesor</td>
+<td>Asesor</td>
+</tr>
+<tr>
+<td>5</td>
+<td>14-sep</td>
+<td>20-sep</td>
+<td>Exposición 2</td>
+<td><strong>SEMANA 5</strong> — Levantar observaciones del E1. Inicio marco conceptual: anatomía ocular, definición y estadios del queratocono (Amsler-Krumeich), instrumentos de diagnóstico (Pentacam, OCT).</td>
+<td><strong>E1</strong></td>
+<td>Lun 15-sep antes del mediodía → asesor envía al profesor</td>
+<td>Profesor del curso</td>
+</tr>
+<tr>
+<td>6</td>
+<td>21-sep</td>
+<td>27-sep</td>
+<td>Exposición 3</td>
+<td><strong>SEMANA 6</strong> — Marco teórico: aprendizaje automático (SVM, Bosques aleatorios) y aprendizaje profundo (Redes neuronales convolucionales, ResNet, EfficientNet) para clasificación de imágenes médicas. Marco legal/ético: regulación de inteligencia artificial médica (FDA, CE Mark), Ley N° 29733 de Protección de Datos Personales (Perú) y normativa GDPR.</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>7</td>
+<td>28-sep</td>
+<td>04-oct</td>
+<td>Exposición 4</td>
+<td><strong>SEMANA 7</strong> — Herramientas, métodos y procedimientos por resultado esperado (Python, TensorFlow/PyTorch, conjunto de datos).</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>8</td>
+<td>05-oct</td>
+<td>11-oct</td>
+<td>Exposición 5</td>
+<td><strong>SEMANA 8</strong> — Integrar E2 completo: correcciones E1 + marco conceptual/teórico/legal + herramientas/métodos/procedimientos. Revisión norma APA 7.ª ed.</td>
+<td><strong>E2</strong>: Levantamiento de obs. del E1, marco conceptual/teórico/legal, herramientas, métodos y procedimientos</td>
+<td>Jue 09-oct antes del mediodía → asesor (adelantado un día como margen)</td>
+<td>Asesor</td>
+</tr>
+<tr>
+<td>9</td>
+<td>12-oct</td>
+<td>18-oct</td>
+<td><strong>Exámenes parciales</strong></td>
+<td><strong>SEMANA 9</strong> — Inicio Anexo Plan de Proyecto: Justificación, Viabilidad, Alcance, Limitaciones, Riesgos, Estructura de Descomposición del Trabajo, Lista de tareas detallada por fase.</td>
+<td><strong>E2</strong></td>
+<td>Lun 13-oct antes del mediodía → asesor envía al profesor</td>
+<td>Profesor del curso</td>
+</tr>
+<tr>
+<td>10</td>
+<td>19-oct</td>
+<td>25-oct</td>
+<td>Exposición 6</td>
+<td><strong>SEMANA 10</strong> — Completar Plan de Proyecto: Cronograma Gantt (Tesis 1 + Tesis 2), Recursos y Costeo. Recibir datos del co-asesor. Generar los mapas de rigidez corneal (Resultado 1).</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>11</td>
+<td>26-oct</td>
+<td>01-nov</td>
+<td>Exposición 7</td>
+<td><strong>SEMANA 11</strong> — Entrenar el modelo de clasificación (red neuronal convolucional con modelo preentrenado) sobre los mapas de rigidez generados. Registrar métricas de desempeño: exactitud, F1 y área bajo la curva ROC.</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>12</td>
+<td>02-nov</td>
+<td>08-nov</td>
+<td>Exposición 8</td>
+<td><strong>SEMANA 12</strong> — Levantar observaciones del E2. Redactar sección "Avance de un resultado" de forma clara y autosuficiente: qué se logró, cómo se logró, cómo se validó. Integrar E3 al 80%. Revisión de formato APA 7.</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>13</td>
+<td>09-nov</td>
+<td>15-nov</td>
+<td>Exposición 9</td>
+<td><strong>SEMANA 13</strong> — Revisión y cierre E3: documento completo + todas las correcciones + Anexo Plan de Proyecto. Preparar diapositivas de exposición final.</td>
+<td><strong>E3</strong>: Proyecto de fin de carrera completo (todas las correcciones + Anexo Plan de Proyecto)</td>
+<td>Vie 14-nov antes del mediodía → asesor</td>
+<td>Asesor</td>
+</tr>
+<tr>
+<td>14</td>
+<td>16-nov</td>
+<td>22-nov</td>
+<td>Exposición 10</td>
+<td>Preparar exposición final. Ensayo de presentación (10-15 min). Anticipar preguntas del jurado.</td>
+<td><strong>E3</strong></td>
+<td>Vie 21-nov antes del mediodía → asesor envía al jurado</td>
+<td>Jurado</td>
+</tr>
+<tr>
+<td>15</td>
+<td>23-nov</td>
+<td>29-nov</td>
+<td>Sesión final</td>
+<td>Ajustes finales de presentación según retroalimentación. Ensayo general.</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>16 y 17</td>
+<td>30-nov</td>
+<td>13-dic</td>
+<td><strong>Exposiciones finales</strong></td>
+<td>Exposición ante el jurado</td>
+<td>—</td>
+<td>—</td>
+<td>Jurado</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Detalle de Avances Semanales</h2>
+<h3>SEMANA 1 — Sem 1 (17-23 ago)</h3>
+<p><strong>Objetivo</strong>: Cronograma enviado al asesor antes del viernes 22-ago al mediodía.</p>
+<table>
+<thead>
+<tr>
+<th>Día</th>
+<th>Actividad</th>
+<th>Horas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vie 22-ago</td>
+<td>Redactar cronograma del ciclo en formato PUCP. Enviar al asesor.</td>
+<td>2h</td>
+</tr>
+<tr>
+<td>Sáb 23-ago noche</td>
+<td>Leer 3-5 artículos introductorios sobre queratocono y sistemas de clasificación.</td>
+<td>2h</td>
+</tr>
+<tr>
+<td>Dom 24-ago</td>
+<td>Definir pregunta de investigación inicial. Crear carpeta de referencias.</td>
+<td>3h</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>SEMANA 2 — Sem 2 (24-30 ago)</h3>
+<p><strong>Objetivo</strong>: Árbol de problemas completo + protocolo de revisión sistemática definido (3 preguntas + 2 bases de datos + cadenas booleanas).</p>
+<table>
+<thead>
+<tr>
+<th>Día</th>
+<th>Actividad</th>
+<th>Horas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vie 29-ago</td>
+<td>Construir árbol de problemas: causas (diagnóstico tardío, variabilidad entre métodos), efectos, situación deseada.</td>
+<td>2h</td>
+</tr>
+<tr>
+<td>Sáb 30-ago noche</td>
+<td>Definir 3 preguntas de revisión. Ej.: ¿Qué técnicas de aprendizaje profundo clasifican queratocono? ¿Qué conjuntos de datos existen? ¿Qué métricas se usan? Seleccionar bases de datos: IEEE Xplore + Scopus.</td>
+<td>2h</td>
+</tr>
+<tr>
+<td>Dom 31-ago</td>
+<td>Construir cadenas de búsqueda booleanas. Ejecutar búsqueda inicial. Registrar número de resultados por base de datos.</td>
+<td>3h</td>
+</tr>
+</tbody>
+</table>
+<p>Nota: Lunes 25-ago → El asesor debe enviar el cronograma al profesor antes del mediodía.</p>
+<hr />
+<h3>SEMANA 3 — Sem 3 (31 ago-6 sep)</h3>
+<p><strong>Objetivo</strong>: Formulario de extracción completado con mínimo 15 artículos seleccionados. Objetivos redactados con Indicadores Objetivamente Verificables (IOV). Análisis comparativo de soluciones similares documentado.</p>
+<table>
+<thead>
+<tr>
+<th>Día</th>
+<th>Actividad</th>
+<th>Horas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vie 05-sep</td>
+<td>Aplicar protocolo PRISMA: filtrar artículos por título y resumen. Seleccionar los más relevantes. Iniciar formulario de extracción (autor, año, conjunto de datos, técnica usada, métricas reportadas).</td>
+<td>2h</td>
+</tr>
+<tr>
+<td>Sáb 06-sep noche</td>
+<td>Completar el formulario de extracción con mínimo 10-15 artículos.</td>
+<td>2h</td>
+</tr>
+<tr>
+<td>Dom 07-sep</td>
+<td>Redactar objetivos: general (clasificar queratocono con aprendizaje profundo) y 3-4 específicos. Definir IOV por cada resultado esperado. Redactar comparativa de sistemas similares existentes en la literatura y explicar en qué se diferencia esta propuesta.</td>
+<td>3-4h</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>SEMANA 4 — Sem 4 (7-13 sep)</h3>
+<p><strong>Objetivo</strong>: E1 completo integrado y enviado al asesor antes del viernes 12-sep al mediodía.</p>
+<table>
+<thead>
+<tr>
+<th>Día</th>
+<th>Actividad</th>
+<th>Horas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vie 12-sep</td>
+<td>Redactar problemática formal integrando el árbol de problemas. Redactar resultados esperados con sus IOV medibles. Adjuntar formulario de extracción como <strong>Anexo A</strong> del E1. Enviar al asesor.</td>
+<td>2h</td>
+</tr>
+<tr>
+<td>Sáb 13-sep noche</td>
+<td>Integrar estado del arte (responder 3 preguntas con evidencia del formulario de extracción). Revisar formato APA 7.</td>
+<td>2h</td>
+</tr>
+<tr>
+<td>Dom 14-sep</td>
+<td>Margen de tiempo para correcciones finales al E1 antes de que el asesor lo envíe.</td>
+<td>2h</td>
+</tr>
+</tbody>
+</table>
+<p>ENTREGABLE E1: Vie 12-sep antes del mediodía → asesor<br />
+Lunes 15-sep: Asesor envía E1 al profesor antes del mediodía.</p>
+<hr />
+<h3>SEMANA 5 — Sem 5 (14-20 sep)</h3>
+<p><strong>Objetivo</strong>: Todas las observaciones del E1 levantadas + Marco conceptual iniciado (anatomía ocular + queratocono).</p>
+<table>
+<thead>
+<tr>
+<th>Día</th>
+<th>Actividad</th>
+<th>Horas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vie 19-sep</td>
+<td>Revisar retroalimentación del profesor sobre el E1. Listar y corregir observaciones en problemática y objetivos.</td>
+<td>2h</td>
+</tr>
+<tr>
+<td>Sáb 20-sep noche</td>
+<td>Redactar marco conceptual: anatomía ocular, definición y estadios del queratocono (Amsler-Krumeich), impacto clínico.</td>
+<td>2h</td>
+</tr>
+<tr>
+<td>Dom 21-sep</td>
+<td>Redactar marco conceptual: instrumentos de diagnóstico corneal (topografía, Pentacam, OCT).</td>
+<td>3h</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>SEMANA 6 — Sem 6 (21-27 sep)</h3>
+<p><strong>Objetivo</strong>: Marco teórico de técnicas de inteligencia artificial completo (aprendizaje automático, redes convolucionales, aprendizaje por transferencia, métricas de clasificación) y marco legal redactado con normativa peruana incluida.</p>
+<table>
+<thead>
+<tr>
+<th>Día</th>
+<th>Actividad</th>
+<th>Horas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vie 26-sep</td>
+<td>Redactar marco teórico: aprendizaje automático (SVM, Bosques aleatorios) para clasificación de patologías oculares.</td>
+<td>2h</td>
+</tr>
+<tr>
+<td>Sáb 27-sep noche</td>
+<td>Redactar marco teórico: aprendizaje profundo (Redes neuronales convolucionales, ResNet, EfficientNet) para clasificación de imágenes médicas.</td>
+<td>2h</td>
+</tr>
+<tr>
+<td>Dom 28-sep</td>
+<td>Redactar marco legal/ético: regulación de dispositivos con inteligencia artificial (FDA, CE Mark); normativa peruana: Ley N° 29733 de Protección de Datos Personales y su reglamento D.S. 003-2013-JUS; regulación europea GDPR.</td>
+<td>3h</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>SEMANA 7 — Sem 7 (28 sep-4 oct)</h3>
+<p><strong>Objetivo</strong>: Herramientas, métodos y procedimientos definidos y justificados por resultado esperado.</p>
+<table>
+<thead>
+<tr>
+<th>Día</th>
+<th>Actividad</th>
+<th>Horas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vie 03-oct</td>
+<td>Redactar herramientas por resultado: Python, TensorFlow/PyTorch, conjunto de datos seleccionado. Justificar con referencias.</td>
+<td>2h</td>
+</tr>
+<tr>
+<td>Sáb 04-oct noche</td>
+<td>Redactar métodos y procedimientos: lectura de archivos de datos del co-asesor, reconstrucción de mapas de rigidez corneal, entrenamiento del modelo de clasificación y estrategia de validación.</td>
+<td>2h</td>
+</tr>
+<tr>
+<td>Dom 05-oct</td>
+<td>Integrar E2 parcialmente: correcciones E1 + marco + herramientas. Revisión APA 7.</td>
+<td>3-4h</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>SEMANA 8 — Sem 8 (5-11 oct)</h3>
+<p><strong>Objetivo</strong>: E2 completo y enviado al asesor antes del <strong>jueves 09-oct al mediodía</strong> (con margen real de correcciones para el lunes 13-oct).</p>
+<table>
+<thead>
+<tr>
+<th>Día</th>
+<th>Actividad</th>
+<th>Horas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jue 09-oct</td>
+<td>Revisión final E2. Verificar que todas las obs. del E1 estén levantadas. Enviar al asesor con un día de anticipación.</td>
+<td>2h</td>
+</tr>
+<tr>
+<td>Vie 10-oct</td>
+<td>Margen de tiempo para atender observaciones del asesor sobre el E2.</td>
+<td>1-2h</td>
+</tr>
+<tr>
+<td>Sáb 11-oct noche</td>
+<td>Preparar diapositivas para exposición de avance.</td>
+<td>2h</td>
+</tr>
+<tr>
+<td>Dom 12-oct</td>
+<td>Margen de tiempo adicional para correcciones. Preparar exámenes parciales.</td>
+<td>2h</td>
+</tr>
+</tbody>
+</table>
+<p>ENTREGABLE E2: Jue 09-oct antes del mediodía → asesor (adelantado un día como margen de seguridad)<br />
+Lunes 13-oct (Sem 9, parciales): Asesor envía E2 al profesor antes del mediodía.</p>
+<hr />
+<h3>SEMANA 9 — Sem 9 (12-18 oct) — Exámenes Parciales</h3>
+<p><strong>Objetivo</strong>: Estructura inicial del Anexo Plan de Proyecto redactada (Justificación, Viabilidad, Alcance, Limitaciones, Riesgos, Estructura de Descomposición del Trabajo y Lista de tareas detallada por fase).</p>
+<table>
+<thead>
+<tr>
+<th>Día</th>
+<th>Actividad</th>
+<th>Horas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vie 17-oct</td>
+<td>Redactar Justificación, Viabilidad (técnica/económica/temporal), Alcance y Limitaciones del proyecto.</td>
+<td>2h</td>
+</tr>
+<tr>
+<td>Sáb 18-oct noche</td>
+<td>Construir Estructura de Descomposición del Trabajo (EDT) y redactar Lista de tareas detallada por fase del proyecto.</td>
+<td>2h</td>
+</tr>
+<tr>
+<td>Dom 19-oct</td>
+<td>Identificar riesgos (falta de datos etiquetados, variabilidad de equipos). Redactar estrategias de mitigación.</td>
+<td>3h</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>SEMANA 10 — Sem 10 (19-25 oct)</h3>
+<p><strong>Objetivo</strong> (Resultado 1): Mapa de rigidez corneal generado a partir de los datos del co-asesor + Plan de Proyecto completo.</p>
+<table>
+<thead>
+<tr>
+<th>Día</th>
+<th>Actividad</th>
+<th>Horas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vie 24-oct</td>
+<td>Redactar cronograma Gantt del proyecto (Tesis 1 + Tesis 2) y costeo de recursos. Cerrar el Plan de Proyecto.</td>
+<td>2h</td>
+</tr>
+<tr>
+<td>Sáb 25-oct noche</td>
+<td>Recibir del co-asesor los archivos de datos de los 70 pacientes. Revisar el formato y estructura de los archivos. Explorar los datos: número de muestras, distribución de casos (queratocono / sano), cobertura de la córnea.</td>
+<td>2h</td>
+</tr>
+<tr>
+<td>Dom 26-oct</td>
+<td>Procesar los datos para generar los mapas de calor 2D que representan la rigidez de la córnea. Verificar que los mapas generados tengan sentido visual y clínico. Documentar el proceso y las decisiones tomadas.</td>
+<td>3-4h</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>SEMANA 11 — Sem 11 (26 oct-1 nov)</h3>
+<p><strong>Objetivo</strong> (Resultado 2): Modelo de clasificación entrenado sobre los mapas de rigidez generados, con sus métricas de desempeño documentadas.</p>
+<table>
+<thead>
+<tr>
+<th>Día</th>
+<th>Actividad</th>
+<th>Horas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vie 31-oct</td>
+<td>Organizar los mapas generados por categoría (queratocono / sano). Aplicar técnicas de ampliación del conjunto de datos para compensar el tamaño reducido de la muestra. Dividir los datos en grupos de entrenamiento, validación y prueba.</td>
+<td>2h</td>
+</tr>
+<tr>
+<td>Sáb 01-nov noche</td>
+<td>Entrenar el modelo de clasificación usando una red neuronal convolucional con pesos preentrenados (ResNet50 o EfficientNet). Registrar las métricas de desempeño: exactitud, F1 y área bajo la curva ROC. Identificar posibles mejoras.</td>
+<td>2h</td>
+</tr>
+<tr>
+<td>Dom 02-nov</td>
+<td>Redactar la sección <strong>"Avance de un resultado"</strong>: describir qué se logró (Resultado 1: mapas generados; Resultado 2: modelo entrenado), cómo se logró paso a paso, y cómo se validó (con tabla de métricas). El texto debe poder entenderse sin necesidad de consultar los anexos.</td>
+<td>3h</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>SEMANA 12 — Sem 12 (2-8 nov)</h3>
+<p><strong>Objetivo</strong>: E3 integrado al 80% con todas las correcciones del E2 levantadas.</p>
+<table>
+<thead>
+<tr>
+<th>Día</th>
+<th>Actividad</th>
+<th>Horas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vie 07-nov</td>
+<td>Levantar observaciones del E2. Mejorar marco conceptual y herramientas según retroalimentación.</td>
+<td>2h</td>
+</tr>
+<tr>
+<td>Sáb 08-nov noche</td>
+<td>Integrar documento E3 completo: problemática + marco + herramientas + plan de proyecto + avance de resultado.</td>
+<td>2h</td>
+</tr>
+<tr>
+<td>Dom 09-nov</td>
+<td>Revisión de formato APA 7, ortografía, transiciones entre secciones.</td>
+<td>3h</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>SEMANA 13 — Sem 13 (9-15 nov)</h3>
+<p><strong>Objetivo</strong>: E3 completo enviado al asesor antes del viernes 14-nov al mediodía.</p>
+<table>
+<thead>
+<tr>
+<th>Día</th>
+<th>Actividad</th>
+<th>Horas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vie 14-nov</td>
+<td>Revisión final E3. Verificar que todas las obs. del E2 estén levantadas. Enviar al asesor.</td>
+<td>2h</td>
+</tr>
+<tr>
+<td>Sáb 15-nov noche</td>
+<td>Preparar diapositivas de exposición final (10-15 min).</td>
+<td>2h</td>
+</tr>
+<tr>
+<td>Dom 16-nov</td>
+<td>Ensayo de exposición. Anticipar preguntas del jurado.</td>
+<td>3h</td>
+</tr>
+</tbody>
+</table>
+<p>ENTREGABLE E3: Vie 14-nov antes del mediodía → asesor<br />
+Viernes 21-nov (Sem 14): Asesor envía E3 al jurado antes del mediodía.</p>
+<hr />
+<h2>Fechas Críticas de Entrega</h2>
+<table>
+<thead>
+<tr>
+<th>Fecha</th>
+<th>Acción</th>
+<th>De → A</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vie 22-ago (antes mediodía)</td>
+<td>Enviar Cronograma</td>
+<td>Estudiante → Asesor</td>
+</tr>
+<tr>
+<td>Lun 25-ago (antes mediodía)</td>
+<td>Asesor envía Cronograma</td>
+<td>Asesor → Profesor</td>
+</tr>
+<tr>
+<td>Vie 12-sep (antes mediodía)</td>
+<td>Enviar E1</td>
+<td>Estudiante → Asesor</td>
+</tr>
+<tr>
+<td>Lun 15-sep (antes mediodía)</td>
+<td>Asesor envía E1</td>
+<td>Asesor → Profesor</td>
+</tr>
+<tr>
+<td><strong>Jue 09-oct (antes mediodía)</strong></td>
+<td><strong>Enviar E2 (adelantado un día como margen)</strong></td>
+<td><strong>Estudiante → Asesor</strong></td>
+</tr>
+<tr>
+<td>Lun 13-oct (antes mediodía)</td>
+<td>Asesor envía E2</td>
+<td>Asesor → Profesor</td>
+</tr>
+<tr>
+<td>Vie 14-nov (antes mediodía)</td>
+<td>Enviar E3</td>
+<td>Estudiante → Asesor</td>
+</tr>
+<tr>
+<td>Vie 21-nov (antes mediodía)</td>
+<td>Asesor envía E3</td>
+<td>Asesor → Jurado</td>
+</tr>
+<tr>
+<td>30-nov al 13-dic</td>
+<td>Exposiciones finales</td>
+<td>— → Jurado</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Cobertura de Rúbricas por Semana</h2>
+<table>
+<thead>
+<tr>
+<th>Rubro de la Rúbrica</th>
+<th>Puntaje</th>
+<th>Semanas que lo cubren</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>E1</strong> — Problemática (árbol de problemas)</td>
+<td>3 pts</td>
+<td>Semanas 2, 4</td>
+</tr>
+<tr>
+<td><strong>E1</strong> — Revisión de literatura y estado del arte (protocolo PRISMA, mínimo 3 preguntas, 2 bases de datos, formulario como Anexo A, análisis comparativo)</td>
+<td>3 pts</td>
+<td>Semanas 2, 3, 4</td>
+</tr>
+<tr>
+<td><strong>E1</strong> — Objetivo general y específicos</td>
+<td>3 pts</td>
+<td>Semana 3</td>
+</tr>
+<tr>
+<td><strong>E1</strong> — Resultados esperados con IOV</td>
+<td>3 pts</td>
+<td>Semanas 3, 4</td>
+</tr>
+<tr>
+<td><strong>E1</strong> — Cronograma de trabajo del curso</td>
+<td>4 pts</td>
+<td>Semana 1</td>
+</tr>
+<tr>
+<td><strong>E1</strong> — Redacción, estilo y formato APA 7</td>
+<td>4 pts</td>
+<td>Semana 4</td>
+</tr>
+<tr>
+<td><strong>E2</strong> — Levantamiento de observaciones del E1</td>
+<td>6 pts</td>
+<td>Semana 5</td>
+</tr>
+<tr>
+<td><strong>E2</strong> — Marco conceptual/teórico/legal (incluye Ley N° 29733)</td>
+<td>4 pts</td>
+<td>Semanas 5, 6</td>
+</tr>
+<tr>
+<td><strong>E2</strong> — Herramientas, métodos y procedimientos por resultado</td>
+<td>6 pts</td>
+<td>Semana 7</td>
+</tr>
+<tr>
+<td><strong>E2</strong> — Redacción, estilo y formato APA 7</td>
+<td>4 pts</td>
+<td>Semanas 7, 8</td>
+</tr>
+<tr>
+<td><strong>E3</strong> — Plan de Proyecto (9 componentes)</td>
+<td>3 pts</td>
+<td>Semanas 9, 10</td>
+</tr>
+<tr>
+<td><strong>E3</strong> — Avance de un resultado</td>
+<td>3-4 pts</td>
+<td>Semanas 10, 11</td>
+</tr>
+<tr>
+<td><strong>E3</strong> — Redacción, estilo y formato</td>
+<td>2 pts</td>
+<td>Semanas 12, 13</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Reglas del curso (recordatorio)</h2>
+<ul>
+<li>Todo entregable debe tener el visto bueno del asesor antes de enviarse al profesor o al jurado. Sin visto bueno = nota 00.</li>
+<li>Cada nuevo entregable debe incluir las observaciones corregidas del anterior. Sin correcciones = nota 00.</li>
+<li>Las fechas de entrega al asesor son máximas sugeridas. Coordinar el esquema de comunicación semanal con el asesor.</li>
+<li>El formulario de extracción debe adjuntarse siempre como <strong>Anexo A</strong> a partir del E1.</li>
+<li>La sección "Avance de un resultado" (E3) debe ser comprensible sin necesidad de consultar los anexos.</li>
+</ul>
+
+<script>
+let pie = null;
+function initPie() {
+  const canvas = document.getElementById('pieChartCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  pie = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: ['Completadas', 'Pendientes'],
+      datasets: [{
+        data: [0, 39],
+        backgroundColor: ['#2e7d32', '#f57f17'],
+        borderWidth: 2,
+        borderColor: '#ffffff'
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'bottom', labels: { boxWidth: 10, font: { size: 10 } } }
+      },
+      cutout: '65%'
+    }
+  });
+}
+
+function updateProgress() {
+  const checkboxes = document.querySelectorAll('.task-cb');
+  let done = 0, total = checkboxes.length;
+  let e1D = 0, e1T = 0, e2D = 0, e2T = 0, e3D = 0, e3T = 0;
+
+  checkboxes.forEach(cb => {
+    const sem = parseInt(cb.getAttribute('data-sem') || '1');
+    if (cb.checked) done++;
+    if (sem <= 4) { e1T++; if (cb.checked) e1D++; }
+    else if (sem <= 8) { e2T++; if (cb.checked) e2D++; }
+    else { e3T++; if (cb.checked) e3D++; }
+  });
+
+  const pending = total - done;
+  const pct = total > 0 ? Math.round((done / total) * 100) : 0;
+
+  const statTotal = document.getElementById('statTotal');
+  const statDone = document.getElementById('statDone');
+  const statPending = document.getElementById('statPending');
+  const statPct = document.getElementById('statPct');
+
+  if (statTotal) statTotal.innerText = total;
+  if (statDone) statDone.innerText = done;
+  if (statPending) statPending.innerText = pending;
+  if (statPct) statPct.innerText = pct + '%';
+
+  const p1 = e1T > 0 ? Math.round((e1D / e1T) * 100) : 0;
+  const p2 = e2T > 0 ? Math.round((e2D / e2T) * 100) : 0;
+  const p3 = e3T > 0 ? Math.round((e3D / e3T) * 100) : 0;
+
+  const e1Txt = document.getElementById('e1Txt');
+  const e1Bar = document.getElementById('e1Bar');
+  const e2Txt = document.getElementById('e2Txt');
+  const e2Bar = document.getElementById('e2Bar');
+  const e3Txt = document.getElementById('e3Txt');
+  const e3Bar = document.getElementById('e3Bar');
+
+  if (e1Txt) e1Txt.innerText = p1 + '% (' + e1D + '/' + e1T + ')';
+  if (e1Bar) e1Bar.style.width = p1 + '%';
+
+  if (e2Txt) e2Txt.innerText = p2 + '% (' + e2D + '/' + e2T + ')';
+  if (e2Bar) e2Bar.style.width = p2 + '%';
+
+  if (e3Txt) e3Txt.innerText = p3 + '% (' + e3D + '/' + e3T + ')';
+  if (e3Bar) e3Bar.style.width = p3 + '%';
+
+  if (pie) {
+    pie.data.datasets[0].data = [done, pending];
+    pie.update();
+  }
+}
+
+function handleCbChange(e) {
+  const id = e.target.id;
+  localStorage.setItem('task_' + id, e.target.checked);
+  const row = e.target.closest('tr');
+  if (row) {
+    if (e.target.checked) row.style.textDecoration = 'line-through';
+    else row.style.textDecoration = 'none';
+  }
+  updateProgress();
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const tables = document.querySelectorAll('body > table');
+  for (let i = 1; i < tables.length; i++) {
+    const semNum = i;
+    const rows = tables[i].querySelectorAll('tbody tr');
+    rows.forEach((r, idx) => {
+      const firstTd = r.querySelector('td:first-child');
+      if (firstTd && !firstTd.querySelector('input')) {
+        const taskId = 'w' + semNum + '_t' + (idx+1);
+        const isDone = localStorage.getItem('task_' + taskId) === 'true';
+        const cb = document.createElement('input');
+        cb.type = 'checkbox';
+        cb.className = 'task-cb';
+        cb.id = taskId;
+        cb.setAttribute('data-sem', semNum);
+        cb.checked = isDone;
+        cb.style.marginRight = '8px';
+        cb.style.cursor = 'pointer';
+        cb.style.accentColor = '#2e7d32';
+        cb.addEventListener('change', handleCbChange);
+        firstTd.prepend(cb);
+        if (isDone) r.style.textDecoration = 'line-through';
+      }
+    });
+  }
+  initPie();
+  updateProgress();
+});
+</script>
+</body>
+</html>
