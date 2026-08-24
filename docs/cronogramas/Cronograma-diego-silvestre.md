@@ -1,6 +1,9 @@
 # Cronograma_Diego_Silvestre - 1INF42-2026-2
 **Tema**: Clasificación de queratocono mediante modelos de aprendizaje profundo aplicados a mapas de rigidez corneal reconstruidos a partir de biomarcadores de velocidad de onda  
-**Metodología de trabajo**: Avances semanales con objetivos claros y fechas de entrega definidas  
+**Estudiante**: Diego Silvestre  
+**Asesor**: Dr. César Beltrán Castañón (Inteligencia Artificial / Informática PUCP)  
+**Co-asesor**: Dr. José Fernando Zvietcovich Zegarra (Biofotónica / Datos OCE)  
+**Metodología de trabajo**: Avances modulares por bloques (sin retrabajos) con objetivos claros y fechas de entrega definidas  
 **Disponibilidad**: 6-8 h/semana → Viernes ~2h | Sábado noche ~2h | Domingo ~3-4h  
 
 ---
@@ -9,10 +12,10 @@
 
 | Sem. | Fecha Inicio | Fecha Fin | Actividad de Clase | Avances / Contenido de la Semana | Entregable Formal | Envío | Revisor |
 |---|---|---|---|---|---|---|---|
-| 1 | 17-ago | 23-ago | Explicación del curso y cronograma | **SEMANA 1** — Redactar cronograma del ciclo. Leer artículos introductorios sobre queratocono. Definir pregunta de investigación inicial. | Cronograma de trabajo del curso | Vie 22-ago antes del mediodía → asesor | Asesor |
-| 2 | 24-ago | 30-ago | Repaso sobre estado del arte y problemática | **SEMANA 2** — Árbol de problemas. Definir 3 preguntas de revisión sistemática. Seleccionar bases de datos (IEEE Xplore + Scopus). Construir cadenas de búsqueda booleanas. | Cronograma de trabajo del curso | Lun 25-ago antes del mediodía → asesor envía al profesor | Profesor del curso |
-| 3 | 31-ago | 06-sep | Repaso sobre objetivos, resultados, IOVs | **SEMANA 3** — Aplicar protocolo PRISMA para filtrar artículos relevantes. Completar formulario de extracción (mínimo 15 artículos). Redactar objetivos general y específicos. Definir Indicadores Objetivamente Verificables (IOV) por resultado. Redactar análisis comparativo de soluciones similares. | — | — | — |
-| 4 | 07-sep | 13-sep | Exposición 1 | **SEMANA 4** — Integrar E1 completo: problemática + estado del arte + objetivos + resultados esperados + cronograma. Adjuntar formulario de extracción como Anexo A. Revisión norma APA 7.ª ed. | **E1**: Problemática, estado del arte, objetivos (general y específicos), resultados esperados (IOV) y cronograma | Vie 12-sep antes del mediodía → asesor | Asesor |
+| 1 | 17-ago | 23-ago | Explicación del curso y cronograma | **SEMANA 1** — Redactar cronograma oficial. Descargar búsquedas en Scopus (84) e IEEE Xplore (17). Configurar repositorio y entorno. | Cronograma de trabajo del curso | Vie 22-ago antes del mediodía → asesor | Dr. César Beltrán |
+| 2 | 24-ago | 30-ago | Repaso sobre estado del arte y problemática | **SEMANA 2** — Árbol de problemas (causas, efectos, situación deseada). Formalizar 3 preguntas de revisión (PI1, PI2, PI3). Ejecutar primer pase de cribado PRISMA en Zotero (101 papers). | Cronograma de trabajo del curso | Lun 25-ago antes del mediodía → asesor envía al profesor | Profesor del curso |
+| 3 | 31-ago | 06-sep | Repaso sobre objetivos, resultados, IOVs | **SEMANA 3** — Completar matriz de extracción (Anexo A en Excel con 16 papers). Redactar objetivo general y 4 específicos con sus IOVs. Redactar análisis comparativo de soluciones. | — | — | — |
+| 4 | 07-sep | 13-sep | Exposición 1 | **SEMANA 4** — Integrar E1 completo (Problemática + Estado del arte respondiendo PI1-PI3 + Objetivos/IOVs + Cronograma + Anexo A). Revisión APA 7ma ed. | **E1**: Problemática, estado del arte, objetivos, resultados esperados (IOV) y cronograma | Vie 12-sep antes del mediodía → asesor | Dr. César Beltrán |
 | 5 | 14-sep | 20-sep | Exposición 2 | **SEMANA 5** — Levantar observaciones del E1. Inicio marco conceptual: anatomía ocular, definición y estadios del queratocono (Amsler-Krumeich), instrumentos de diagnóstico (Pentacam, OCT). | **E1** | Lun 15-sep antes del mediodía → asesor envía al profesor | Profesor del curso |
 | 6 | 21-sep | 27-sep | Exposición 3 | **SEMANA 6** — Marco teórico: aprendizaje automático (SVM, Bosques aleatorios) y aprendizaje profundo (Redes neuronales convolucionales, ResNet, EfficientNet) para clasificación de imágenes médicas. Marco legal/ético: regulación de inteligencia artificial médica (FDA, CE Mark), Ley N° 29733 de Protección de Datos Personales (Perú) y normativa GDPR. | — | — | — |
 | 7 | 28-sep | 04-oct | Exposición 4 | **SEMANA 7** — Herramientas, métodos y procedimientos por resultado esperado (Python, TensorFlow/PyTorch, conjunto de datos). | — | — | — |

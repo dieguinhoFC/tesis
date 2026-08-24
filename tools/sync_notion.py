@@ -219,6 +219,16 @@ def clear_database_items(database_id: str):
         for page in results:
             notion_request(f"pages/{page['id']}", method="PATCH", data={"archived": True})
 
+def update_env_db_id(new_db_id: str):
+    env_file = Path(__file__).resolve().parent.parent / ".env"
+    if env_file.exists():
+        content = env_file.read_text(encoding="utf-8")
+        if "NOTION_DATABASE_ID=" in content:
+            content = re.sub(r"NOTION_DATABASE_ID=.*", f"NOTION_DATABASE_ID={new_db_id}", content)
+        else:
+            content += f"\nNOTION_DATABASE_ID={new_db_id}\n"
+        env_file.write_text(content, encoding="utf-8")
+
 def main():
     if not NOTION_API_KEY or not NOTION_PAGE_ID:
         print("\n❌ Error: NOTION_API_KEY o NOTION_PAGE_ID no configurados en .env\n")
@@ -233,16 +243,25 @@ def main():
     print(f"📋 Se encontraron {len(tasks)} actividades en el cronograma.")
     
     db_id = os.getenv("NOTION_DATABASE_ID")
+    db_ready = False
+    
     if db_id:
-        print(f"🔄 Usando base de datos existente en Notion (ID: {db_id})")
-        clear_database_items(db_id)
-    else:
+        try:
+            print(f"🔄 Verificando base de datos existente en Notion (ID: {db_id})...")
+            clear_database_items(db_id)
+            db_ready = True
+        except Exception as e:
+            print(f"⚠️ Base de datos anterior no accesible ({e}). Creando una nueva base de datos...")
+            db_ready = False
+            
+    if not db_ready:
         db_id = create_notion_database(NOTION_PAGE_ID)
-        print(f"💡 Guarda en tu .env: NOTION_DATABASE_ID={db_id}")
+        update_env_db_id(db_id)
+        print(f"💡 Guardado en tu .env: NOTION_DATABASE_ID={db_id}")
         
     populate_database(db_id, tasks)
     
-    print("\n🎉 ¡Sincronización completada con éxito!")
+    print("\n🎉 ¡Sincronización completada con éxito en Notion!")
     print("👉 En Notion ahora puedes ordenar por 'Fecha' (Ascendente) o 'Orden' (1, 2, 3...) y activar vista Calendario / Chart.")
 
 if __name__ == "__main__":

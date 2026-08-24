@@ -2,6 +2,8 @@
 
 **Tema**: Clasificación de queratocono mediante modelos de aprendizaje profundo aplicados a mapas de rigidez corneal reconstruidos a partir de biomarcadores de velocidad de onda  
 **Estudiante**: Diego Silvestre  
+**Asesor**: Dr. César Beltrán Castañón  
+**Co-asesor**: Dr. José Fernando Zvietcovich Zegarra (Grupo de Biofotónica / OCE)  
 
 ---
 
@@ -11,6 +13,8 @@
 ProyectoTesis/
 │
 ├── docs/                             # Documentación de la tesis
+│   ├── Descripcion-Proyecto-Tesis.md # Documento Maestro: PICOC, Estado del Arte y Metodología
+│   ├── E1-Borrador-Entregable1.md    # Borrador Formal del Entregable 1 (E1)
 │   ├── cronogramas/                  # Cronogramas y planificaciones
 │   │   ├── Cronograma-diego-silvestre.md
 │   │   ├── Cronograma-diego-silvestre.html
@@ -19,12 +23,16 @@ ProyectoTesis/
 │   │   ├── 1INF42-2026-2-Cronograma.pdf
 │   │   ├── ProyectoFinCarrera_v3.0.docx
 │   │   ├── Tesis1.md
-│   │   └── para-formulacion-proy-fin-de-carrera-1.pdf
-│   └── notas/                        # Apuntes y notas de entendimiento
-│       └── Lo que voy entendiendo.pdf
+│   │   └── Checklist-Rubrica-PUCP.md
+│   ├── notas/                        # Guías y notas técnicas de soporte
+│   │   └── Guia-Preguntas-Asesor-Biofotonica.md
+│   └── referencias/                  # Capturas y diapositivas de referencia del laboratorio
 │
 ├── papers/                           # Estado del arte y literatura científica
 │   ├── Referencias.xlsx              # Formulario de extracción de artículos (Anexo A)
+│   ├── ris/                          # Exportaciones bibliográficas brutas (PRISMA)
+│   │   ├── SCOPUS_EXPORTADO_21-0802026.ris  # 84 artículos de Scopus
+│   │   └── IEEE_Xplore_2026.ris             # 17 artículos de IEEE Xplore
 │   └── pdfs/                         # Artículos científicos descargados
 │
 ├── tools/                            # Herramientas de seguimiento y automatización

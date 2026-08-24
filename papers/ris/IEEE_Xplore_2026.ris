@@ -1,0 +1,607 @@
+TY  - JOUR
+TI  - KerNet: A Novel Deep Learning Approach for Keratoconus and Sub-Clinical Keratoconus Detection Based on Raw Data of the Pentacam HR System
+T2  - IEEE Journal of Biomedical and Health Informatics
+SP  - 3898
+EP  - 3910
+AU  - R. Feng
+AU  - Z. Xu
+AU  - X. Zheng
+AU  - H. Hu
+AU  - X. Jin
+AU  - D. Z. Chen
+AU  - K. Yao
+AU  - J. Wu
+PY  - 2021
+KW  - Deep learning
+KW  - Software
+KW  - Feature extraction
+KW  - Tomography
+KW  - Three-dimensional displays
+KW  - Surface topography
+KW  - Fuses
+KW  - Keratoconus
+KW  - sub-clinical keratoconus
+KW  - Pentacam HR system
+KW  - raw data
+KW  - end-to-end deep learning
+DO  - 10.1109/JBHI.2021.3079430
+JO  - IEEE Journal of Biomedical and Health Informatics
+IS  - 10
+SN  - 2168-2208
+VO  - 25
+VL  - 25
+JA  - IEEE Journal of Biomedical and Health Informatics
+Y1  - Oct. 2021
+AB  - Keratoconus is one of the most severe corneal diseases, which is difficult to detect at the early stage (i.e., sub-clinical keratoconus) and possibly results in vision loss. In this paper, we propose a novel end-to-end deep learning approach, called KerNet, which processes the raw data of the Pentacam HR system (consisting of five numerical matrices) to detect keratoconus and sub-clinical keratoconus. Specifically, we propose a novel convolutional neural network, called KerNet, containing five branches as the backbone with a multi-level fusion architecture. The five branches receive five matrices separately and capture effectively the features of different matrices by several cascaded residual blocks. The multi-level fusion architecture (i.e., low-level fusion and high-level fusion) moderately takes into account the correlation among five slices and fuses the extracted features for better prediction. Experimental results show that: (1) our novel approach outperforms state-of-the-art methods on an in-house dataset, by ~1% for keratoconus detection accuracy and ~4 for sub-clinical keratoconus detection accuracy; (2) the attention maps visualized by Grad-CAM show that our KerNet places more attention on the inferior temporal part for sub-clinical keratoconus, which has been proved as the identifying regions for ophthalmologists to detect sub-clinical keratoconus in previous clinical studies. To our best knowledge, we are the first to propose an end-to-end deep learning approach utilizing raw data obtained by the Pentacam HR system for keratoconus and subclinical keratoconus detection. Further, the prediction performance and the clinical significance of our KerNet are well evaluated and proved by two clinical experts. Our code is available at https://github.com/upzheng/Keratoconus.
+ER  - 
+
+TY  - CONF
+TI  - Automated Detection of Keratoconus using EfficientNetB7 : A Deep Learning Approach
+T2  - 2025 International Conference on Electronics, AI and Computing (EAIC)
+SP  - 1
+EP  - 6
+AU  - S. V. K. Yadav
+AU  - A. Kaur
+PY  - 2025
+KW  - Deep learning
+KW  - Cornea
+KW  - Sensitivity
+KW  - Scalability
+KW  - Optical coherence tomography
+KW  - Visual impairment
+KW  - Convolutional neural networks
+KW  - Artificial intelligence
+KW  - Monitoring
+KW  - Diseases
+KW  - Keratoconus(KCN)
+KW  - Cornea
+KW  - Efficientnetb7
+KW  - Corneal Maps
+KW  - Medical Image Processing
+KW  - Optical Coherence Tomography
+DO  - 10.1109/EAIC66483.2025.11101529
+JO  - 2025 International Conference on Electronics, AI and Computing (EAIC)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2025 International Conference on Electronics, AI and Computing (EAIC)
+Y1  - 5-7 June 2025
+AB  - A progressive and degenerative eye condition called keratoconus is illustrated by the cornea’s thinning and bulging into a cone-like form. The consequence of this deformity is severe visual impairment, including distorted vision, increased sensitivity to light, and potential vision loss if left untreated. Early and precise detection of keratoconus is crucial for improved monitoring and therapeutic outcomes, as timely intervention can prevent disease progression and improve patient outcomes. In this work, we implemented a deep learning approach leveraging the use of EfficientNet-B7 architecture to detect and classify keratoconus, suspect, and normal corneas. EfficientNet-B7, known for its superior performance and scalability, was employed as the backbone of our convolutional neural network (CNN). The dataset used for this study comprised multiple samples, each consisting of seven distinct corneal maps, including topographic, tomographic, and pachymetric representations. These maps provided a holistic view of corneal structure and variations, allowing the model to depict the complex patterns linked to keratoconus. The proposed methodology has achieved a validation accuracy of 97%. This study demonstrates how deep learning can significantly advance eye care, offering precise and early detection of keratoconus by incorporating corneal maps that can improve the quality of life of individuals at risk for keratoconus. This advancement highlights the importance of integrating advanced AI models into clinical practice for the early diagnosis and management of ocular diseases.
+ER  - 
+
+TY  - CONF
+TI  - Automating Corneal Diagnosis for Keratoconus Detection using Deep Learning
+T2  - 2025 International Conference on NexGen Networks and Cybernetics (IC2NC)
+SP  - 789
+EP  - 793
+AU  - R. Sandhiya
+AU  - K. Sruthi
+AU  - K. Vasumathi
+AU  - K. T. Yukesshwaran
+AU  - S. S. Raja Ganesh
+AU  - G. Sundaravadivel
+PY  - 2025
+KW  - Deep learning
+KW  - Training
+KW  - Accuracy
+KW  - Transfer learning
+KW  - Surfaces
+KW  - Feature extraction
+KW  - Data models
+KW  - Convolutional neural networks
+KW  - Tuning
+KW  - Diseases
+KW  - Keratoconus detection
+KW  - corneal topography
+KW  - deep learning
+KW  - Convolutional Neural Network (CNN)
+KW  - EfficientNet
+KW  - ResNet
+KW  - DenseNet
+KW  - medical image classification
+DO  - 10.1109/IC2NC67409.2025.11376280
+JO  - 2025 International Conference on NexGen Networks and Cybernetics (IC2NC)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2025 International Conference on NexGen Networks and Cybernetics (IC2NC)
+Y1  - 1-3 Dec. 2025
+AB  - The recognition of keratoconus is emerging as a focus of interest in contemporary Ophthalmology, which is important because a timely identification of the disease can prevent severe vision loss and intervene in the disease process, long before it reaches an advanced stage of risk to vision. This study assesses the role of artificial intelligence, namely modern deep learning algorithms, in the development of systems for automated clinician-based classification of corneal disease based on topography images. After precisely labelling a corpus of corneal topography scans, a number of processing techniques, normalization, and augmentation are employed to improve the quality of the topography scans and therefore enhance the efficacy and robustness of the deep learning models. Novel Convolutional Neural Network (CNN) architectures are evaluated, that recognized subtle changes in the shape and curvature of the cornea, which traditional diagnostic techniques may not recognize. The importance of preparation steps which are supported by data preparation, preprocessing and feature extraction phases to identify clinically-relevant features/patterns in the corneal maps, is emphasized. A process for selecting and tuning high performing models: ResNet, EfficientNet and Dense Net, models which can be used on many other medical imaging classification and diagnostic tasks, has been outlined. Validation methods against frameworks with full training and testing of the models have also been provided.
+ER  - 
+
+TY  - CONF
+TI  - Autoencoder-Based Transfer Learning for Multi-Stage Keratoconus Classification Using Corneal Biomechanical Parameters
+T2  - 2026 International Conference on Sustainable and Futuristic Technologies (ICSFT)
+SP  - 1
+EP  - 5
+AU  - S. R. Bakal
+AU  - S. R. Sankaye
+AU  - N. S. Bansod
+AU  - A. D. Kadam
+AU  - S. S. Ghodke
+PY  - 2026
+KW  - Modeling
+KW  - Printing
+KW  - Training
+KW  - Machine learning
+KW  - Accuracy
+KW  - Machining
+KW  - Measurement
+KW  - Tomography
+KW  - Deep learning
+KW  - Ophthalmology
+KW  - keratoconus
+KW  - deep learning
+KW  - autoencoder
+KW  - transfer learning
+KW  - ophthalmology
+KW  - medical AI
+KW  - corneal biomechanics
+KW  - classification
+DO  - 10.1109/ICSFT67370.2026.11566664
+JO  - 2026 International Conference on Sustainable and Futuristic Technologies (ICSFT)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2026 International Conference on Sustainable and Futuristic Technologies (ICSFT)
+Y1  - 24-25 April 2026
+AB  - Keratoconus is the non-inflammatory and a progressive corneal disease where early keratoconus stage detection and staging are important to guide clinical management. Most automated approaches rely on the imaging modalities for the binary classification. There are limited number of works exists on numerical corneal parameter based multistage keratoconus diagnosis in literature review. This research study proposes the Advanced deep learning technique using autoencoder-based representation learning, which is followed by transfer learning to automate the staging of keratoconus utilizing 446 biomechanical as well as tomographic features. The Dataset includes total 3,162 annotated data samples over four severity Classes i.e. Normal, Early, Moderate, Severe. The proposed methodology pipeline includes three training phases, 1. a baseline multilayer perceptron classifier, 2. a pretrained frozen classifier using the autoencoder encoder, and 3. a fine-tuned end-to-end model. The proposed models were then evaluated utilizing evaluation metrices alike accuracy with precision, recall, and macro F1-score value. The fine-tuned model performed best with 96.37% accuracy, 94.76% precision, 90.16% recall, and 92.35% macro-F1 which outperformed the baseline and Frozen feature models. The results shows that the autoencoder-based pretraining actually improves the representation quality of the tabular corneal metrics, which enables reliable four-stage severity evaluation without any relying on any imaging modalities. The proposed research framework represents a strong potential as a clinically deployable decisionsupport tool for keratoconus staging.
+ER  - 
+
+TY  - CONF
+TI  - AI-Powered Detection of Eye Rubbing Behavior for Keratoconus Analysis Using Wearable Devices
+T2  - 2025 47th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC)
+SP  - 1
+EP  - 4
+AU  - B. D. Giap
+AU  - J. Lustre
+AU  - J. Ong
+AU  - A. Venugopal
+AU  - N. Nallasamy
+PY  - 2025
+KW  - Visualization
+KW  - Cornea
+KW  - Accuracy
+KW  - Real-time systems
+KW  - Recording
+KW  - Reliability
+KW  - Wearable devices
+KW  - Engineering in medicine and biology
+KW  - Diseases
+DO  - 10.1109/EMBC58623.2025.11253623
+JO  - 2025 47th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC)
+IS  - 
+SN  - 2694-0604
+VO  - 
+VL  - 
+JA  - 2025 47th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC)
+Y1  - 14-18 July 2025
+AB  - Eye rubbing is widely believed to significantly contribute to the development and progression of keratoconus, a potentially blinding disorder of the cornea. Keratoconus involves corneal apical thinning and scarring and can result in painful episodes of swelling of the cornea termed corneal hydrops. As a result, keratoconus can necessitate corneal transplantation for visual recovery and can result in irreversible vision loss in patients who are not candidates for corneal transplantation. Accurately quantifying eye rubbing behavior and rigorously assessing its impact on keratoconus progression are critical needs. Currently, eye rubbing assessment in individuals at risk for keratoconus onset or progression relies mainly on self-reports and occasional clinical observations, which are insufficient to quantify the effects of eye rubbing on keratoconus progression. In this paper, we introduce an innovative deep learning-based analysis framework for real-time, automatic detection of eye rubbing using sensor data from wrist-based wearable devices. To develop and validate the proposed system, a dataset of 1,068 non-overlapping recordings from 9 subjects was built. Our results show that the framework effectively identifies eye rubbing behaviors during normal daily activities, achieving an average F1-score of 93.55% and AUC of 96.23%. This system offers a valuable tool for ophthalmologists and researchers by providing rapid, reliable quantification of eye rubbing behavior in patients.
+ER  - 
+
+TY  - CONF
+TI  - A Novel Multi-Modal Deep Learning Framework for Early Keratoconus Detection and Progression Prediction
+T2  - 2025 1st International Conference on Advancement in Futuristic Technologies (ICAFT)
+SP  - 1
+EP  - 5
+AU  - R. S
+AU  - T. N
+AU  - D. Deepa
+PY  - 2025
+KW  - Deep learning
+KW  - Biomechanics
+KW  - Performance evaluation
+KW  - Accuracy
+KW  - Optical coherence tomography
+KW  - Transforms
+KW  - Surfaces
+KW  - Predictive models
+KW  - Feature extraction
+KW  - Ophthalmology
+KW  - Keratoconus
+KW  - multi-modal deep learning
+KW  - corneal topography
+KW  - biomechanics
+KW  - progression prediction
+KW  - early detection
+DO  - 10.1109/ICAFT66710.2025.11452898
+JO  - 2025 1st International Conference on Advancement in Futuristic Technologies (ICAFT)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2025 1st International Conference on Advancement in Futuristic Technologies (ICAFT)
+Y1  - 19-21 Dec. 2025
+AB  - Keratoconus is a progressive disease that affects the cornea. It causes thinning and distortion, leading to serious vision problems if not detected and treated early. In this work, we introduce a new multi-modal deep learning framework for early detection and predicting the progression of keratoconus. This framework combines information from various imaging sources and clinical data. Specifically, our system uses corneal topography maps, Scheimpflug tomography scans, optical coherence tomography (OCT) images, and patient-specific clinical features like age, corneal thickness, intraocular pressure, and refraction metrics. Each imaging type is processed through its own sub-network to automatically extract important features. These features are then aligned, combined, and further processed to capture interactions between the different modalities and create comprehensive diagnostic signatures.We perform experiments using a large, multi-center clinical dataset collected from various imaging devices and patient groups. For early detection of keratoconus, our method achieves an area under the ROC curve (AUROC) of 0.98 on test sets, significantly surpassing individual modality baselines like topography or OCT alone. For predicting progression, which means forecasting the severity or rate of corneal change over time, the model reaches 93% accuracy and shows strong performance across different centers and imaging techniques. Our studies indicate that both the imaging modalities and the clinical features play important roles in performance. The fusion architecture clearly outperforms simple concatenation or late fusion methods.Additionally, we examine how interpretable the model is by using saliency maps and attention techniques. These tools highlight important areas, such as thinning regions and curvature peaks, across the different modalities, which helps us understand how the model makes its predictions. Our findings suggest that this integrated, user-focused deep learning tool can assist ophthalmologists in their decisions, potentially leading to earlier interventions, personalized monitoring, and better outcomes for patients at risk for keratoconus.
+ER  - 
+
+TY  - CONF
+TI  - Efficient Keratoconus Classification Using Quantized Grayscale Tomography and a Lightweight CNN
+T2  - 2025 2nd Beyond Technology Summit on Informatics International Conference (BTS-I2C)
+SP  - 652
+EP  - 657
+AU  - A. T. Alqazaz
+AU  - M. A. M. Abdullah
+AU  - B. A. Saeed
+PY  - 2025
+KW  - Deep learning
+KW  - Visualization
+KW  - Accuracy
+KW  - Quantization (signal)
+KW  - Gray-scale
+KW  - Ophthalmology
+KW  - Convolutional neural networks
+KW  - Informatics
+KW  - Medical diagnostic imaging
+KW  - Image classification
+KW  - Keratoconus
+KW  - Corneal Tomography
+KW  - Deep Learning
+KW  - ML
+KW  - Lightweight CNN
+KW  - Color-Coded Maps
+KW  - Medical Image Classification
+DO  - 10.1109/BTS-I2C67944.2025.11399514
+JO  - 2025 2nd Beyond Technology Summit on Informatics International Conference (BTS-I2C)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2025 2nd Beyond Technology Summit on Informatics International Conference (BTS-I2C)
+Y1  - 18-18 Dec. 2025
+AB  - Keratoconus is a degenerative condition of the cornea that may cause considerable visual deterioration. Diagnosing keratoconus remains challenging for ophthalmologists, primarily because it is a time-intensive process and involves complex clinical evaluations. This study introduces a compact convolutional neural network (CNN) architecture specifically developed to analyze both RGB and grayscale tomography images for the purpose of keratoconus detection. To the best of our knowledge, this is the first study to utilize low-depth grayscale images for the detection of keratoconus. The proposed CNN model was applied to classify color-coded maps derived from the Pentacam device. Each map was tested under five different formats—RGB, 8-bit grayscale (256 levels), 4-bit grayscale (16 levels), 3-bit grayscale (8 levels), and 2-bit grayscale (4 levels)—to enable a comprehensive comparison. The model was evaluated and compared to assess the effectiveness of grayscale quantization on keratoconus detection using color-coded maps. Results indicated that the RGB input yielded the lowest performance. Among the grayscale formats, the 8-level grayscale achieved the highest performance when using corneal thickness (CT) or elevation anterior (EA) maps. For sagittal anterior (SAG) maps, both colored images and the 8-level grayscale format yielded the highest classification accuracy. Additional experiments with traditional machine learning (ML) approaches demonstrated variable performance, with certain configurations yielding strong results and others performing less effectively.
+ER  - 
+
+TY  - JOUR
+TI  - Self-Attention-Based Xception Convolutional Neural Network for Keratoconus Stage Classification Using 2-D RGB Corneal Images
+T2  - IEEE Access
+SP  - 104264
+EP  - 104280
+AU  - M. S. Anwar
+AU  - E. Özbílge
+PY  - 2026
+KW  - Modeling
+KW  - Architecture
+KW  - Computer architecture
+KW  - Convolution
+KW  - Accuracy
+KW  - Training
+KW  - Convolutional neural networks
+KW  - Measurement
+KW  - Testing
+KW  - Visualization
+KW  - Attention mechanism
+KW  - deep learning
+KW  - keratoconus detection
+KW  - medical image classification
+KW  - Xception
+DO  - 10.1109/ACCESS.2026.3712107
+JO  - IEEE Access
+IS  - 
+SN  - 2169-3536
+VO  - 14
+VL  - 14
+JA  - IEEE Access
+Y1  - 2026
+AB  - Keratoconus is an eye disease that can cause significant vision loss if not detected early. The traditional diagnostic procedure uses corneal tomography images, which provide multi-colour-coded maps and quantitative indices describing the rich structural measurements of the cornea. However, obtaining corneal tomography images requires expensive devices, such as the OCULUS Pentacam system. To increase diagnostic accessibility in low-income regions and reduce diagnostic costs, we first proposed using two-dimensional (2D) RGB colour images captured with a smartphone which is a low-cost imaging device. To detect the keratoconus stage using 2D RGB colour images and overcome the limitations of traditional convolutional neural networks, in this study, we developed an attention-based convolutional neural network derived by modifying the Xception architecture for automatic keratoconus stage classification. The proposed network incorporates query-key-value attention modules, an extended middle flow, and depthwise convolutional blocks to better preserve spatial information and enhance channel-wise feature interactions while maintaining a reasonable computational cost. Experiments were conducted on a novel collected labelled dataset comprising normal, mild, and advanced keratoconus cases to validate the proposed attention-enhanced Xception architecture. The proposed model achieved an overall classification accuracy of 92.86% and reported macro-average precision, recall, and F1 scores above 92%, demonstrating consistent performance across the three disease stage classes. Analysis of the confusion matrix demonstrated strong stage-based discrimination, with perfect identification of advanced cases and minimal misclassification between mild and normal stages. These findings demonstrate that the proposed attention-enhanced Xception architecture provides an effective and generalisable solution for early keratoconus screening, particularly in resource-constrained environments where access to advanced ophthalmic imaging systems is limited.
+ER  - 
+
+TY  - CONF
+TI  - CorneaNet: A Deep Learning Framework for Explainable and Early Detection of Keratoconus from Multimodal Corneal Tomography
+T2  - 2025 9th International Conference on I-SMAC (IoT in Social, Mobile, Analytics and Cloud) (I-SMAC)
+SP  - 1680
+EP  - 1685
+AU  - D. R
+AU  - R. Niruban
+AU  - S. E. Roselin
+AU  - N. Vinitha
+PY  - 2025
+KW  - Modeling
+KW  - Machine learning
+KW  - Printing
+KW  - Signal detection
+KW  - Deep learning
+KW  - Accuracy
+KW  - Machining
+KW  - Convolutional neural networks
+KW  - Cams
+KW  - Computer aided manufacturing
+KW  - Scheimpflug tomography
+KW  - CorneaNet
+KW  - keratoconus
+KW  - Gradient-weighted Class Activation Mapping
+KW  - biomarkers
+DO  - 10.1109/I-SMAC65734.2025.11597589
+JO  - 2025 9th International Conference on I-SMAC (IoT in Social, Mobile, Analytics and Cloud) (I-SMAC)
+IS  - 
+SN  - 2768-0673
+VO  - 
+VL  - 
+JA  - 2025 9th International Conference on I-SMAC (IoT in Social, Mobile, Analytics and Cloud) (I-SMAC)
+Y1  - 8-10 Oct. 2025
+AB  - Keratoconus (KC) is a progressive ocular disease involving thinning and conical steepening of the cornea, which may result in serious visual impairment if left undiagnosed or untreated. It is crucial to diagnose keratoconus early and correctly in order to take appropriate action and prevent the condition from worsening. Traditional diagnostic methods, are slow to respond to new forms of disease, and much time and effort are spent in this process. Although current deep learning (DL) methods have shown high performance in computerized KC detection. This paper introduces CorneaNet, a new multiinput convolutional neural network (CNN) structure for explainable and robust keratoconus classification from Scheimpflug tomography scans. Our model takes four multimodal inputs: anterior curvature, posterior elevation, pachymetry, and wavefront aberration maps. Gradientweighted Class Activation Mapping (Grad-CAM) is integrated into the framework for creating visual heatmaps that identify the pathological features. Trained and tested on a large 12,570 scans from 1,845 patients dataset, CorneaNet attained area under the curve (AUC) of 0.997 for the detection of clinical KC and 0.983 for detecting subclinical KC on a held-out test set. The Grad-CAM outputs corroborated that the attention of the model is consistent with established clinical biomarkers.
+ER  - 
+
+TY  - CONF
+TI  - Automated Detection and Classification of Keratoconus Using Deep Learning with ResNet-50
+T2  - 2026 5th OPJU International Technology Conference (OTCON) on Smart Computing for Innovation and Advancement in Industry 5.0
+SP  - 1
+EP  - 5
+AU  - P. Nasra
+AU  - G. R. Kiran
+AU  - P. Negi
+AU  - P. K. Mishra
+AU  - Srishti
+AU  - T. Sharma
+PY  - 2026
+KW  - Modeling
+KW  - Training
+KW  - Deep learning
+KW  - Convolutional neural networks
+KW  - Printing
+KW  - Accuracy
+KW  - Diseases
+KW  - Artificial intelligence
+KW  - Signal detection
+KW  - Technology
+KW  - Keratoconus
+KW  - Deep Learning
+KW  - ResNet-50
+KW  - Convolutional Neural Networks
+KW  - Corneal Imaging
+KW  - Ophthalmology
+DO  - 10.1109/OTCON69332.2026.11629721
+JO  - 2026 5th OPJU International Technology Conference (OTCON) on Smart Computing for Innovation and Advancement in Industry 5.0
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2026 5th OPJU International Technology Conference (OTCON) on Smart Computing for Innovation and Advancement in Industry 5.0
+Y1  - 26-28 June 2026
+AB  - Keratoconus is a progressive eye disorder causing thinning and prolusion of the eye which causes impaired sight and distortion of refractive outcomes. This is known to severely deteriorate the vision and early detection will help in averting it. The application of traditional methods of diagnosis relying on the professional impression of the topography of the cornea and tomography results can be considered retrospective and timeconsuming. The present paper provides an example of the implementation of the concept of deep learning using the ResNet-50 convolutional neural network (CNN) code in order to come up with an automated process of identifying and categorizing Keratoconus with a 96.8-percent accuracy. The suggested model is trained on a variety of data comprising of cornea topography images that belong to three categories, including Normal, Suspect and Keratoconus. The model that has been developed is very accurate and has high generalization property, which alleviates manual intervention in clinical diagnosis.
+ER  - 
+
+TY  - CONF
+TI  - AI-Driven Keratoconus Detection: Integrating Medical Insights for Enhanced Diagnosis
+T2  - 2023 11th RSI International Conference on Robotics and Mechatronics (ICRoM)
+SP  - 654
+EP  - 660
+AU  - M. Keshavarz
+AU  - M. J. Ahmadi
+AU  - S. S. Naseri
+AU  - P. Ghorbani
+AU  - M. M. Zadeh
+AU  - H. F. Pour
+AU  - S. F. Mohammadi
+AU  - H. D. Taghirad
+PY  - 2023
+KW  - Heuristic algorithms
+KW  - Surgery
+KW  - Surfaces
+KW  - Feature extraction
+KW  - Classification algorithms
+KW  - Artificial intelligence
+KW  - Medical diagnostic imaging
+KW  - Keratoconus Diagnosis
+KW  - Medical Image
+KW  - Artificial Intelligence
+KW  - CNN
+KW  - Data Fusion
+DO  - 10.1109/ICRoM60803.2023.10412506
+JO  - 2023 11th RSI International Conference on Robotics and Mechatronics (ICRoM)
+IS  - 
+SN  - 2572-6889
+VO  - 
+VL  - 
+JA  - 2023 11th RSI International Conference on Robotics and Mechatronics (ICRoM)
+Y1  - 19-21 Dec. 2023
+AB  - The proper diagnosis of keratoconus as a main ocular disorder is imperative for reducing the risk of vision blurring and potential blindness. Additionally, keratoconus (KC) significantly increases the risk of refractive eye surgeries. By using Artificial Intelligence (AI) and machine vision for early and automatic diagnosis, the risks and costs in medical systems could be significantly reduced. This study introduces an image dataset acquired by the Pentacam device, which is commonly used in keratoconus diagnosis. These images include four eye topography maps and have been labeled by three experts in two categories Suitable for refractive surgery and Non-suitable for refractive surgery. Distinguishing between these two categories in certain images poses a significant challenge. In the diagnosis of keratoconus, ophthalmologists perform a comprehensive evaluation of corneal topography maps and assign different levels of significance to each map. This research paper presents a novel algorithm that utilizes AI to imitate this medical insight. For this purpose, a regression network has been integrated into the classification algorithm to obtain the importance degree for each map. The degree of importance, which was created for each of the four maps, quantifies the level of attention given to each map in order to facilitate ideal classification. The suggested algorithm in this article utilizes a range of backbones as well as transfer learning techniques. The most favorable outcome was observed while utilizing the VGG backbone in the algorithm, yielding an F1-score of 95%, which is very promising.
+ER  - 
+
+TY  - CONF
+TI  - Keratoconus Detection and Diagnosis Support System using Machine Learning
+T2  - 2025 International Conference on Sustainable Communication Networks and Application (ICSCN)
+SP  - 2050
+EP  - 2055
+AU  - S. Uke
+AU  - P. Bhagwat
+AU  - P. Batchu
+AU  - R. Bhandari
+AU  - S. Bhandare
+PY  - 2025
+KW  - Accuracy
+KW  - Cornea
+KW  - Computational modeling
+KW  - Visual impairment
+KW  - Transfer learning
+KW  - Morphology
+KW  - Computer architecture
+KW  - Surfaces
+KW  - Computational efficiency
+KW  - Convolutional neural networks
+KW  - Keratoconus
+KW  - Corneal topography
+KW  - convolutional neural networks
+KW  - automated diagnosis
+KW  - Grad-CAM
+DO  - 10.1109/ICSCN67106.2025.11308355
+JO  - 2025 International Conference on Sustainable Communication Networks and Application (ICSCN)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2025 International Conference on Sustainable Communication Networks and Application (ICSCN)
+Y1  - 15-17 Oct. 2025
+AB  - Keratoconus is a progressive eye disease recognised by thinning of the cornea with irregular curvature, and requires early identification for preventing serious visual impairment. In the paper, we have presented a system that assists with the automated detection and diagnosis of keratoconus using corneal topography maps through machine learning. The proposed approach employs three distinct Convolutional Neural Network (CNN) architectures, each tailored to analyse specific corneal planes: sagittal, corneal, and elevated. The models achieved average validation accuracies of 96%, 98%, and 91%, respectively, demonstrating the effectiveness of plane-specific feature extraction for this task. To enhance clinical interpretability, Gradient-weighted Class Activation Mapping (Grad-CAM) was integrated to visually highlight regions of the cornea most influential in the model's predictions. To validate the design decisions, alternative architectures, including MobileResNetV2, were evaluated in comparative experiments. While some alternative architectures, such as MobileNetV2, demonstrated marginally higher single-metric accuracy, the proposed system achieved a superior balance of high diagnostic performance, effective extraction of corneal morphology, and greater computational efficiency compared to larger, pre-trained models. The system is engineered to detect curvature anomalies, asymmetries, and elevation discrepancies through the corneal maps. The present model complements the classical clinical analysis by facilitating systematic scrutiny of the corneal abnormalities. The results of the study demonstrate that characterisation of multiple corneal planes adds rigour to the diagnosis of keratoconus by leveraging biomarkers observed at different levels of the keratoconus disease continuum. The study shows the potential utility of objective and scalable measures in ophthalmology for purposes of earlier screening and monitoring response to treatment.
+ER  - 
+
+TY  - CONF
+TI  - Detecting Keratoconus using Machine Learning Models
+T2  - 2022 4th International Conference on Artificial Intelligence and Speech Technology (AIST)
+SP  - 1
+EP  - 5
+AU  - R. Goyal
+AU  - P. Maity
+AU  - M. Bhatia
+AU  - A. Grover
+PY  - 2022
+KW  - Training
+KW  - Support vector machines
+KW  - Sensitivity
+KW  - Imaging
+KW  - Predictive models
+KW  - Sensitivity and specificity
+KW  - Prediction algorithms
+KW  - Machine Learning
+KW  - Healthcare
+KW  - Keratoconus
+KW  - Deep Learning
+KW  - Convolutional Neural Network
+KW  - Corneal thickness
+DO  - 10.1109/AIST55798.2022.10065321
+JO  - 2022 4th International Conference on Artificial Intelligence and Speech Technology (AIST)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2022 4th International Conference on Artificial Intelligence and Speech Technology (AIST)
+Y1  - 9-10 Dec. 2022
+AB  - One of the major progressing sectors due to the introduction of technology has been healthcare. Diagnosis of patients has improved by manifolds. Keratoconus is a rare disease where it affects the patient’s cornea. There are ongoing researches around the world to find a solution that is accessible and practical. Our objective is to detect whether a person is suffering from Keratoconus or not. This huge volume of important data cannot be handled manually, hence use of concepts like machine learning, data analysis, data mining, etc. play an important role. To evaluate accuracy of Machine learning models like Inception V3, VGG16, MobileNet V2, ResNet 50 using color coded corneal maps. The authors have implemented these models and compared their performances amongst each other and thus select the best fit model. The training set contains of 1050 images and comprising of 1051 Normal eyes and 862 Suspect eyes. The models were implemented in python language on the Google Colab Platform. These models are providing a range of 75-95% accuracies depending on the different models. The highest accuracy was obtained by Inception V3 which was 95%. The dataset were corneal maps recorded using Scheimpflug imaging system. Based on the classification of the parameters of the corneal maps, the input data was sorted on the basis of severity and also predicting how likely the patient is to suffer from keratoconus
+ER  - 
+
+TY  - CONF
+TI  - Review of Machine Learning and Deep Learning Methods for Cornal Disease Classification
+T2  - 2026 IEEE 23rd International Multi-Conference on Systems, Signals & Devices (SSD)
+SP  - 299
+EP  - 304
+AU  - S. M. Ali
+AU  - Y. M. Abbosh
+AU  - D. M. Ali
+PY  - 2026
+KW  - Modeling
+KW  - Diseases
+KW  - Artificial intelligence
+KW  - Retina
+KW  - Accuracy
+KW  - Eyes
+KW  - Machine learning
+KW  - Cornea
+KW  - Medical diagnosis
+KW  - Imaging
+KW  - artificial intelligence
+KW  - deep learning
+KW  - machine learning
+KW  - convolutional neural networks
+KW  - transfer learning methodologies
+KW  - Corneal and Retinal Disease Classification
+DO  - 10.1109/SSD69655.2026.11559038
+JO  - 2026 IEEE 23rd International Multi-Conference on Systems, Signals & Devices (SSD)
+IS  - 
+SN  - 2474-0446
+VO  - 
+VL  - 
+JA  - 2026 IEEE 23rd International Multi-Conference on Systems, Signals & Devices (SSD)
+Y1  - 30 March-2 April 2026
+AB  - 2022 to 2025, research on using AI for corneal disease classification has grown quickly,while AI for retinal diseases has continued to progress. Most studies on corneal disorders have focused on keratoconus, keratitis, and corneal ulcers. Advanced deep learning and machine learning methods, especially convolutional neural networks and transfer learning, have performed well on benchmark datasets, sometimes matching human graders. Still, clinical validation is limited.In comparison, retinal disease classification has been studied more thoroughly, especially for diabetic retinopathy, age-related macular degeneration, and diabetic macular edema.Leading models like MobileNetV2, Inception-ResNet V2, attention-based U-Net+ + hybrid ensembles, and Vision Transformers have achieved over 92% accuracy on some datasets, usually in controlled settings. Retinal studies benefit from larger and more varied datasets, while corneal research is more limited but growing fast. The literature shows that deep learning and machine learning methods have improved early disease detection and grading consistency on certain datasets. Some studies report better sensitivity, specificity, or AUC than traditional machine learning, but these gains depend on the dataset and often lack external clinical validation. Overall, these methods may be useful for large-scale screening in controlled environments, but realworld use is not yet confirmed.
+ER  - 
+
+TY  - JOUR
+TI  - A Novel Network With Parallel Resolution Encoders for the Diagnosis of Corneal Diseases
+T2  - IEEE Transactions on Biomedical Engineering
+SP  - 3671
+EP  - 3680
+AU  - A. Elsawy
+AU  - M. Abdel-Mottaleb
+PY  - 2021
+KW  - Diseases
+KW  - Image resolution
+KW  - Cornea
+KW  - Training data
+KW  - Deep learning
+KW  - Sensitivity analysis
+KW  - Optical coherence tomography
+KW  - Optical coherence tomography
+KW  - deep learning
+KW  - diagnosis
+KW  - cornea
+DO  - 10.1109/TBME.2021.3082152
+JO  - IEEE Transactions on Biomedical Engineering
+IS  - 12
+SN  - 1558-2531
+VO  - 68
+VL  - 68
+JA  - IEEE Transactions on Biomedical Engineering
+Y1  - Dec. 2021
+AB  - Objective: To propose a deep-learning network for the diagnosis of two corneal diseases: Fuchs’ endothlelial dystrophy and keratoconus, based on optical coherence tomography (OCT) images of the cornea. Methods: In this paper, we propose a novel network with parallel resolution-specific encoders and composite classification features to directly diagnose Fuchs’ endothelial dystrophy and keratoconus using OCT images. Our proposed network consists of a multi-resolution input, multiple parallel encoders, and a composite of convolutional and dense features for classification. The purpose of using parallel resolution-specific encoders is to perform multi-resolution feature fusion. Also, using composite classification features enhances the dense feature learning. We implemented other related networks for comparison with our network and performed k-fold cross-validation on a dataset of 16,721 OCT images. We used saliency maps and sensitivity analysis to visualize our proposed network. Results: The proposed network outperformed other networks with an image classification accuracy of 0.91 and a scan classification accuracy of 0.94. The visualizations show that our network learned better features than other networks. Significance: The proposed methods can potentially be a step towards the early diagnosis of corneal diseases, which is necessary to prevent their progression, hence, prevent loss of vision.
+ER  - 
+
+TY  - CONF
+TI  - An Improved Canny Algorithm for Corneal Topography in Placido
+T2  - 2025 10th International Symposium on Advances in Electrical, Electronics and Computer Engineering (ISAEECE)
+SP  - 281
+EP  - 284
+AU  - T. Guo
+AU  - X. Ma
+AU  - X. Zhang
+PY  - 2025
+KW  - Image quality
+KW  - Deep learning
+KW  - Fourier transforms
+KW  - Accuracy
+KW  - Image edge detection
+KW  - Fitting
+KW  - Medical services
+KW  - Surfaces
+KW  - Feature extraction
+KW  - Lenses
+KW  - Corneal Topography
+KW  - Canny Edge Detection
+KW  - Inverse Fourier transform
+KW  - CLAHE
+KW  - Smooth Ring Mask
+DO  - 10.1109/ISAEECE66033.2025.11160157
+JO  - 2025 10th International Symposium on Advances in Electrical, Electronics and Computer Engineering (ISAEECE)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2025 10th International Symposium on Advances in Electrical, Electronics and Computer Engineering (ISAEECE)
+Y1  - 20-22 June 2025
+AB  - Orthokeratology (OK lenses) is a specialized, high oxygen-permeable, rigid corneal reshaping contact lens that has been demonstrated to be effective in controlling and slowing down the progression of myopia in young people. The application of OK lenses during nocturnal hours enables the cornea to undergo a transient modification, thereby mitigating or eradicating refractive errors, thereby enhancing unassisted vision. To ensure the accuracy and reliability of the fitting parameters provided by the doctor during the diagnostic process, it is imperative to employ a corneal topography with distinct edges and a high signal-to-noise ratio. This is a pivotal step in the fitting of keratoconus lenses. The doctor’s assessment of the corneal topography is informed by their professional knowledge and experience, forming the foundation of their diagnosis. Prior to the acquisition of corneal topography, it is imperative to extract features from ocular photographs through the implementation of edge detection methodologies. Presently, the integration of the Canny edge detection algorithm and deep learning is employed to achieve corneal image ring recognition, a method that exhibits a commendable detection effect but is encumbered by suboptimal generalization capabilities and diagnostic efficiency. The traditional Canny algorithm has been the subject of much research due to its limitations in eliminating pepper noise and producing unclear extracted edges. An improved Canny algorithm has been proposed that overcomes these shortcomings. The proposed algorithm first uses contrast-limited adaptive histogram equalization (CLAHE) to enhance the image to be detected. Then, it creates a smooth ring mask. Finally, it uses the inverse Fourier transform to restore the image and extract the edge features. Through a series of comparison experiments, it was determined that the enhanced algorithm demonstrates superior performance in comparison to the conventional Canny edge detection method. The enhanced algorithm has been shown to detect more edge details, accentuate the contour, and enhance image quality by 10% to 15%. The Canny algorithm’s strengths, including its capacity for robust self-adaptation and effective interference removal, are preserved.
+ER  - 
+
+TY  - CONF
+TI  - A Survey on Automated Eye Disease Detection using Computer Vision Based Techniques
+T2  - 2021 IEEE Pune Section International Conference (PuneCon)
+SP  - 1
+EP  - 6
+AU  - A. H. Vyas
+AU  - V. Khanduja
+PY  - 2021
+KW  - Cataracts
+KW  - Training
+KW  - Solid modeling
+KW  - Costs
+KW  - Retinopathy
+KW  - Manuals
+KW  - Feature extraction
+KW  - Eye disease detection
+KW  - medical image processing
+KW  - deep learning
+KW  - computer aided diagnosis
+KW  - machine learning
+DO  - 10.1109/PuneCon52575.2021.9686479
+JO  - 2021 IEEE Pune Section International Conference (PuneCon)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2021 IEEE Pune Section International Conference (PuneCon)
+Y1  - 16-19 Dec. 2021
+AB  - Due to recent advancements in the field of Artificial Intelligence (AI), many recent techniques have been developed to objectively identify diseases using images or videos. Eye-related diseases are one of the commonly occurring diseases in the human body. Many diseases can manifest in the eye such as Diabetic Retinopathy (DR), glaucoma, dry eye, Age Related Macular Degeneration (ARMD), cataract, keratoconus and so on. These diseases can cause severe discomfort in patients eye leading to vision loss, blurred vision or photophobia, highly impacting the quality of life of patients. Various AI and image processing techniques have been developed to assist ophthalmologists to diagnose the disease precisely as well as reducing healthcare cost. This paper reviews techniques utilizing machine learning and deep learning to detect eye diseases namely ARMD, cataract, DR and glaucoma. It is observed that the accuracy of AI based techniques outperforms manual feature extraction and classification techniques in all four disease detection areas.
+ER  - 
+
+
