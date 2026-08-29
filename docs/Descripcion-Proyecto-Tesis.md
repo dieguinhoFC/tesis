@@ -9,22 +9,21 @@
 
 ---
 
-## 1. Fundamento Clínico y Físico del Problema
+## 1. Fundamento del Problema (Alineado al Árbol de Problemas)
 
-### A. La Problemática Médica: Detección Temprana del Queratocono
-* El **queratocono** es una ectasia corneal progresiva no inflamatoria caracterizada por el adelgazamiento biomecánico y la deformación cónica del tejido corneal, lo que genera astigmatismo irregular severo y pérdida de visión.
-* **El riesgo crítico (Pre-LASIK):** En cirugía refractiva con láser, operar a un paciente con queratocono en etapa incipiente (**Queratocono Subclínico o *Forme Fruste - FFKC***) desencadena una complicación iatrogénica devastadora (*ectasia post-LASIK*).
-* **Falla de los sistemas actuales:** Los equipos clínicos estándar (topógrafos/tomógrafos como *Pentacam* o *OCT geométrico*) solo miden curvatura y elevación exterior. En etapa subclínica, la córnea mantiene su geometría aparentemente normal, haciendo invisible la patología en fases tempranas.
+El proyecto aborda la dificultad de clasificar de forma precisa el estado de la córnea (normal, subclínico y avanzado), un proceso actualmente ineficiente debido a las siguientes causas fundamentales:
 
-### B. La Técnica de Adquisición: OCE y Ondas de Lamb (Aporte del Laboratorio)
-* **Elastografía por Coherencia Óptica (OCE):** Técnica desarrollada por el grupo de biofotónica que excita el tejido corneal mecánicamente y rastrea la propagación de **ondas de Lamb (*Lamb waves*)** en múltiples meridianos ($0^\circ, 22.5^\circ, 45^\circ, 67.5^\circ, 90^\circ$).
-* **Principio físico:** 
-  * En tejido sano y rígido $\rightarrow$ La onda viaja **rápido**.
-  * En tejido patológico/ablandado $\rightarrow$ La onda viaja **lenta**.
-* **Biomarcadores Físicos Clave:**
-  1. **$\text{STI}$ (*Speed-Thickness Index*):** Desviación respecto a la recta de regresión normal entre espesor ($\mu\text{m}$) y velocidad ($m/\text{s}$). Valores $\text{STI} < 0$ indican ablandamiento tisular anormal ($\text{STI} \approx -0.01$ en sanos, $-0.38$ en subclínicos y $-1.22$ en queratocono clínico).
-  2. **$\text{SAWS}$ (*Spatial Anisotropy of Wave Speed*):** Cuantifica la asimetría de propagación entre meridianos (anisotropía fraccional NFA), significativamente elevada en córneas afectadas.
-  3. **Mapas Polares 2D:** Reconstrucción espacial en 2D de la distribución continua de rigidez y velocidad corneal.
+### A. Limitaciones Clínicas y Sutileza de la Enfermedad
+* **El riesgo crítico (Pre-LASIK):** Operar con láser a un paciente con queratocono incipiente (**Queratocono Subclínico o *Forme Fruste - FFKC***) desencadena una complicación iatrogénica devastadora (*ectasia post-LASIK*).
+* **Limitación de parámetros morfológicos (Topografía):** Los equipos clínicos estándar solo miden geometría. Al no medir directamente el debilitamiento biomecánico temprano de la córnea, fallan en la detección subclínica.
+* **Sutileza de los cambios tempranos:** Las variaciones biomecánicas entre un ojo sano y uno con queratocono subclínico son extremadamente sutiles y se solapan estadísticamente, haciendo que los métodos de clasificación manual y los umbrales simples sean ineficientes.
+
+### B. El Reto Biomecánico y la Pérdida de Información Analítica
+* **Elastografía por Coherencia Óptica (OCE):** Para superar las limitaciones morfológicas, el laboratorio de biofotónica utiliza OCE para rastrear la propagación de **ondas de Lamb** y generar biomarcadores como el índice $\text{STI}$ (*Speed-Thickness Index*) y reconstrucciones en **Mapas Polares 2D**.
+* **Complejidad física de los datos:** La propagación de estas ondas mecánicas exhibe un comportamiento no lineal altamente complejo, acoplado a variables como la anisotropía y el espesor.
+* **Pérdida de información en el análisis tradicional:** Reducir esta rica información espacio-temporal (Mapas 2D polares) a simples promedios escalares o índices tabulares omite patrones implícitos y asimetrías cruciales para lograr una clasificación precisa.
+
+**La Solución Propuesta (Informática):** Extraer automáticamente características profundas directamente de los **Mapas Polares 2D** mediante *Deep Learning*, evitando la pérdida de información del procesamiento analítico tabular y capturando las sutiles relaciones no lineales para diferenciar el queratocono subclínico.
 
 ---
 
@@ -40,16 +39,34 @@
 
 ---
 
-## 3. Preguntas de Investigación (PI) para el Estado del Arte (E1)
+## 3. Objetivos de la Tesis y Resultados (IOV)
 
-* **PI1 (Arquitecturas de Aprendizaje Profundo en Datasets Reducidos):**  
-  > *¿Qué arquitecturas de redes neuronales convolucionales (ej. ResNet, EfficientNet) y técnicas de transfer learning / data augmentation ofrecen mayor robustez y previenen el sobreajuste para la clasificación de mapas 2D médicos con muestras limitadas ($N < 300$)?*
+*   **Objetivo General:** Desarrollar y validar un pipeline computacional basado en redes neuronales convolucionales para la clasificación automatizada de queratocono (normal, subclínico y clínico) a partir de mapas espaciales de velocidad de onda (OCE), optimizando el tiempo de procesamiento y la precisión diagnóstica.
+*   **Objetivos Específicos & Resultados Esperados (IOV):**
+    1.  **OE1:** Preprocesar y consolidar el dataset de mapas OCE provenientes de 142 córneas (71 pacientes) para su compatibilidad con arquitecturas profundas.
+        *   *Resultado 1:* Dataset estructurado y particionado (Group K-Fold).
+        *   *IOV:* Repositorio de datos/metadatos documentado en formato CSV/HDF5.
+    2.  **OE2:** Diseñar y entrenar modelos de Deep Learning (ej. ResNet, EfficientNet) empleando transferencia de aprendizaje para extraer características latentes de los mapas de rigidez.
+        *   *Resultado 2:* Algoritmo de clasificación entrenado.
+        *   *IOV:* Repositorio de código (GitHub) con el script de entrenamiento y archivo de pesos (`.pth` o `.h5`).
+    3.  **OE3:** Evaluar el rendimiento diagnóstico del modelo mediante métricas de clasificación multiclase (AUC-ROC, F1-Score) y métodos de interpretabilidad visual (Grad-CAM).
+        *   *Resultado 3:* Reporte técnico de validación del modelo.
+        *   *IOV:* Documento de reporte (o notebook de evaluación) detallando matrices de confusión y mapas de activación.
 
-* **PI2 (Biomarcadores de OCE y Biomecánica Corneal):**  
-  > *¿De qué manera los biomarcadores biomecánicos basados en elastografía OCE (velocidad de ondas de Lamb, índice STI y anisotropía espacial SAWS) permiten discriminar estadios subclínicos frente a los índices topográficos convencionales?*
+---
 
-* **PI3 (Desempeño, Sensibilidad y Brechas en Queratocono Subclínico):**  
-  > *¿Qué niveles de exactitud y sensibilidad reportan los sistemas actuales de inteligencia artificial al clasificar queratocono subclínico frente a córneas sanas, y cuáles son las principales limitaciones metodológicas identificadas en la literatura?*
+## 4. Preguntas de Investigación (PI) para el Estado del Arte (E1)
+
+Las preguntas de investigación (PI) guiarán el desarrollo de la Revisión Sistemática (PRISMA):
+
+* **PI 1 (Automatización del Cuello de Botella Matemático):**  
+  > *¿De qué manera las arquitecturas de Deep Learning permiten analizar directamente los mapas espacio-temporales de elastografía (OCE), automatizando y reemplazando la compleja extracción matemática manual de parámetros biomecánicos?*
+
+* **PI 2 (Efectividad en Diagnóstico Subclínico):**  
+  > *¿Qué tan efectiva es esta clasificación automatizada con Inteligencia Artificial para diferenciar el queratocono subclínico de una córnea normal, superando las sutiles diferencias biomecánicas?*
+
+* **PI 3 (Viabilidad y Confianza Clínica):**  
+  > *¿Cómo el uso de técnicas de explicabilidad visual (como mapas Grad-CAM) ayuda a justificar clínicamente las predicciones del modelo de IA, reduciendo el riesgo de sesgo humano y facilitando su adopción médica?*
 
 ---
 
