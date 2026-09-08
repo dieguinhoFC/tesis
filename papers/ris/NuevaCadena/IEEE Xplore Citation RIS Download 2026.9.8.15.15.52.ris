@@ -1,0 +1,253 @@
+TY  - CONF
+TI  - A Novel Multi-Modal Deep Learning Framework for Early Keratoconus Detection and Progression Prediction
+T2  - 2025 1st International Conference on Advancement in Futuristic Technologies (ICAFT)
+SP  - 1
+EP  - 5
+AU  - R. S
+AU  - T. N
+AU  - D. Deepa
+PY  - 2025
+KW  - Deep learning
+KW  - Biomechanics
+KW  - Performance evaluation
+KW  - Accuracy
+KW  - Optical coherence tomography
+KW  - Transforms
+KW  - Surfaces
+KW  - Predictive models
+KW  - Feature extraction
+KW  - Ophthalmology
+KW  - Keratoconus
+KW  - multi-modal deep learning
+KW  - corneal topography
+KW  - biomechanics
+KW  - progression prediction
+KW  - early detection
+DO  - 10.1109/ICAFT66710.2025.11452898
+JO  - 2025 1st International Conference on Advancement in Futuristic Technologies (ICAFT)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2025 1st International Conference on Advancement in Futuristic Technologies (ICAFT)
+Y1  - 19-21 Dec. 2025
+AB  - Keratoconus is a progressive disease that affects the cornea. It causes thinning and distortion, leading to serious vision problems if not detected and treated early. In this work, we introduce a new multi-modal deep learning framework for early detection and predicting the progression of keratoconus. This framework combines information from various imaging sources and clinical data. Specifically, our system uses corneal topography maps, Scheimpflug tomography scans, optical coherence tomography (OCT) images, and patient-specific clinical features like age, corneal thickness, intraocular pressure, and refraction metrics. Each imaging type is processed through its own sub-network to automatically extract important features. These features are then aligned, combined, and further processed to capture interactions between the different modalities and create comprehensive diagnostic signatures.We perform experiments using a large, multi-center clinical dataset collected from various imaging devices and patient groups. For early detection of keratoconus, our method achieves an area under the ROC curve (AUROC) of 0.98 on test sets, significantly surpassing individual modality baselines like topography or OCT alone. For predicting progression, which means forecasting the severity or rate of corneal change over time, the model reaches 93% accuracy and shows strong performance across different centers and imaging techniques. Our studies indicate that both the imaging modalities and the clinical features play important roles in performance. The fusion architecture clearly outperforms simple concatenation or late fusion methods.Additionally, we examine how interpretable the model is by using saliency maps and attention techniques. These tools highlight important areas, such as thinning regions and curvature peaks, across the different modalities, which helps us understand how the model makes its predictions. Our findings suggest that this integrated, user-focused deep learning tool can assist ophthalmologists in their decisions, potentially leading to earlier interventions, personalized monitoring, and better outcomes for patients at risk for keratoconus.
+ER  - 
+
+TY  - CONF
+TI  - Autoencoder-Based Transfer Learning for Multi-Stage Keratoconus Classification Using Corneal Biomechanical Parameters
+T2  - 2026 International Conference on Sustainable and Futuristic Technologies (ICSFT)
+SP  - 1
+EP  - 5
+AU  - S. R. Bakal
+AU  - S. R. Sankaye
+AU  - N. S. Bansod
+AU  - A. D. Kadam
+AU  - S. S. Ghodke
+PY  - 2026
+KW  - Modeling
+KW  - Printing
+KW  - Training
+KW  - Machine learning
+KW  - Accuracy
+KW  - Machining
+KW  - Measurement
+KW  - Tomography
+KW  - Deep learning
+KW  - Ophthalmology
+KW  - keratoconus
+KW  - deep learning
+KW  - autoencoder
+KW  - transfer learning
+KW  - ophthalmology
+KW  - medical AI
+KW  - corneal biomechanics
+KW  - classification
+DO  - 10.1109/ICSFT67370.2026.11566664
+JO  - 2026 International Conference on Sustainable and Futuristic Technologies (ICSFT)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2026 International Conference on Sustainable and Futuristic Technologies (ICSFT)
+Y1  - 24-25 April 2026
+AB  - Keratoconus is the non-inflammatory and a progressive corneal disease where early keratoconus stage detection and staging are important to guide clinical management. Most automated approaches rely on the imaging modalities for the binary classification. There are limited number of works exists on numerical corneal parameter based multistage keratoconus diagnosis in literature review. This research study proposes the Advanced deep learning technique using autoencoder-based representation learning, which is followed by transfer learning to automate the staging of keratoconus utilizing 446 biomechanical as well as tomographic features. The Dataset includes total 3,162 annotated data samples over four severity Classes i.e. Normal, Early, Moderate, Severe. The proposed methodology pipeline includes three training phases, 1. a baseline multilayer perceptron classifier, 2. a pretrained frozen classifier using the autoencoder encoder, and 3. a fine-tuned end-to-end model. The proposed models were then evaluated utilizing evaluation metrices alike accuracy with precision, recall, and macro F1-score value. The fine-tuned model performed best with 96.37% accuracy, 94.76% precision, 90.16% recall, and 92.35% macro-F1 which outperformed the baseline and Frozen feature models. The results shows that the autoencoder-based pretraining actually improves the representation quality of the tabular corneal metrics, which enables reliable four-stage severity evaluation without any relying on any imaging modalities. The proposed research framework represents a strong potential as a clinically deployable decisionsupport tool for keratoconus staging.
+ER  - 
+
+TY  - CONF
+TI  - Review of Machine Learning and Deep Learning Methods for Cornal Disease Classification
+T2  - 2026 IEEE 23rd International Multi-Conference on Systems, Signals & Devices (SSD)
+SP  - 299
+EP  - 304
+AU  - S. M. Ali
+AU  - Y. M. Abbosh
+AU  - D. M. Ali
+PY  - 2026
+KW  - Modeling
+KW  - Diseases
+KW  - Artificial intelligence
+KW  - Retina
+KW  - Accuracy
+KW  - Eyes
+KW  - Machine learning
+KW  - Cornea
+KW  - Medical diagnosis
+KW  - Imaging
+KW  - artificial intelligence
+KW  - deep learning
+KW  - machine learning
+KW  - convolutional neural networks
+KW  - transfer learning methodologies
+KW  - Corneal and Retinal Disease Classification
+DO  - 10.1109/SSD69655.2026.11559038
+JO  - 2026 IEEE 23rd International Multi-Conference on Systems, Signals & Devices (SSD)
+IS  - 
+SN  - 2474-0446
+VO  - 
+VL  - 
+JA  - 2026 IEEE 23rd International Multi-Conference on Systems, Signals & Devices (SSD)
+Y1  - 30 March-2 April 2026
+AB  - 2022 to 2025, research on using AI for corneal disease classification has grown quickly,while AI for retinal diseases has continued to progress. Most studies on corneal disorders have focused on keratoconus, keratitis, and corneal ulcers. Advanced deep learning and machine learning methods, especially convolutional neural networks and transfer learning, have performed well on benchmark datasets, sometimes matching human graders. Still, clinical validation is limited.In comparison, retinal disease classification has been studied more thoroughly, especially for diabetic retinopathy, age-related macular degeneration, and diabetic macular edema.Leading models like MobileNetV2, Inception-ResNet V2, attention-based U-Net+ + hybrid ensembles, and Vision Transformers have achieved over 92% accuracy on some datasets, usually in controlled settings. Retinal studies benefit from larger and more varied datasets, while corneal research is more limited but growing fast. The literature shows that deep learning and machine learning methods have improved early disease detection and grading consistency on certain datasets. Some studies report better sensitivity, specificity, or AUC than traditional machine learning, but these gains depend on the dataset and often lack external clinical validation. Overall, these methods may be useful for large-scale screening in controlled environments, but realworld use is not yet confirmed.
+ER  - 
+
+TY  - CONF
+TI  - Performance Benchmarking of Transformer-based Pretrained Deep Learning Models for Keratoconus Disease Identification
+T2  - 2026 6th International Conference on Image Processing and Capsule Networks (ICIPCN)
+SP  - 602
+EP  - 608
+AU  - N. Ahmed
+AU  - M. M. Rahman
+AU  - M. F. Ishrak
+AU  - M. I. K. Joy
+AU  - M. S. H. Sabuj
+AU  - M. S. Rahman
+PY  - 2026
+KW  - Training
+KW  - Deep learning
+KW  - Hands
+KW  - Visualization
+KW  - Accuracy
+KW  - Shape
+KW  - Image processing
+KW  - Pipelines
+KW  - Transformers
+KW  - Residual neural networks
+KW  - Keratoconus Detection
+KW  - Convolutional Neural Networks (CNNs)
+KW  - Deep Learning
+KW  - MobileNetV2
+KW  - Pre-trained Models
+DO  - 10.1109/ICIPCN67432.2026.11438629
+JO  - 2026 6th International Conference on Image Processing and Capsule Networks (ICIPCN)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2026 6th International Conference on Image Processing and Capsule Networks (ICIPCN)
+Y1  - 27-29 Jan. 2026
+AB  - Keratoconus is a progressive eye disorder in which the cornea thins and bulges into a cone shape, causing increasing visual distortion that often begins in adolescence or early adulthood, and the purpose of this research is to present a comprehensive comparison of eight CNNs (pre-trained) that detect keratoconus. The experiment utilized a meticulously put-together dataset comprising keratoconus, normal, and suspect samples. The models assessed were DenseNet121, EfficientNetB0, InceptionResNetV2, InceptionV3, MobileNetV2, ResNet50, VGG16, and VGG19. A rigorous preprocessing pipeline, including sample removal, resizing, rescaling, and augmentation, was developed to ensure consistent and optimized model training. The same hyperparameters, activation functions, and optimizers were used for training all models to ensure a fair comparison. Performance was evaluated based on accuracy, precision, recall, and F1-score. Among the architectures, MobileNetV2 was the best performer, demonstrating its ability to make the fewest incorrect predictions in distinguishing between keratoconus cases and normal ones. InceptionV3 and DenseNet121 were also highly accurate, particularly in the case of keratoconus detection, although both models had issues with the suspect class. On the other hand, the models EfficientNetB0, ResNet50, and VGG19 struggled, especially in distinguishing between suspect and normal samples, which suggests that they still require refinement.
+ER  - 
+
+TY  - CONF
+TI  - Detection of Healthy and Unhealthy Human Cornea
+T2  - 2025 3rd International Conference on Data Science and Information System (ICDSIS)
+SP  - 1
+EP  - 7
+AU  - N. M. Mohie
+AU  - A. Qasim
+AU  - M. A. Ali
+AU  - A. R. Hassan
+AU  - W. Al-Salman
+PY  - 2025
+KW  - Training
+KW  - Logistic regression
+KW  - Accuracy
+KW  - Cornea
+KW  - Nearest neighbor methods
+KW  - Polynomials
+KW  - Logic
+KW  - Artificial intelligence
+KW  - Medical diagnostic imaging
+KW  - Information systems
+KW  - zernike polynomials
+KW  - detection human cornea
+KW  - artificial intelligence
+DO  - 10.1109/ICDSIS65355.2025.11070838
+JO  - 2025 3rd International Conference on Data Science and Information System (ICDSIS)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2025 3rd International Conference on Data Science and Information System (ICDSIS)
+Y1  - 16-17 May 2025
+AB  - This work aims to design artificial intelligence systems used for medical purposes, including diagnosis of corneal surface conditions using Zernike coefficients. In this work, use 135 case studies of patients that 80 females and 55 males were collected, 32 of which were abnormal and 103 were normal, the orange program was used to design five theories of artificial intelligence, the Neural Network, Tree, Logistic regression, KNN, ADABOOST use 10 non-defined samples were used for the purpose of normal or abnormal diagnosis The sample information was entered into CSV formats where it was used for the purpose of training the theories used, the Tree results showed 100% of the expected results Neural Network gave results of 100% of the expected results, while the Logistic regression Research theory gave results of 50% of the expected results and the KNN theory gave results of 70% of the expected results and ADABOOST theory gave results of 100% of expected results. These theories were tested by repeating the number of samples used to 616 samples and applied to 10 unknown samples concluded that there were theories that increased accuracy in diagnosis such as tree theories and changed the percentage of expected results from 70% to 100% like the theory of KNN, the rest of the theories did not change the rates of diagnosis and also did not change the proportion of expected results.
+ER  - 
+
+TY  - CONF
+TI  - Comparison of statistical models for the detection of uniform reverberant shear wave fields
+T2  - 2021 IEEE International Ultrasonics Symposium (IUS)
+SP  - 1
+EP  - 4
+AU  - E. A. Miranda
+AU  - B. Castaneda
+AU  - S. E. Romero
+PY  - 2021
+KW  - Support vector machines
+KW  - Ultrasonic variables measurement
+KW  - Estimation
+KW  - Phantoms
+KW  - Machine learning
+KW  - Probability
+KW  - Media
+KW  - R-SWE
+KW  - reverberant field
+KW  - SWS
+KW  - uniformity
+DO  - 10.1109/IUS52206.2021.9593570
+JO  - 2021 IEEE International Ultrasonics Symposium (IUS)
+IS  - 
+SN  - 1948-5727
+VO  - 
+VL  - 
+JA  - 2021 IEEE International Ultrasonics Symposium (IUS)
+Y1  - 11-16 Sept. 2021
+AB  - Reverberant shear wave field elastography (R-SWE) is an image modality that evaluates tissue stiffness by creating a reverberant shear wave field in all directions of the medium. This implementation facilitates the estimation of the shear wave speed (SWS), ergo the viscoelasticity of the tissue. Its feasibility has been validated in breast, liver, corneas and plantar tissue. Nevertheless, the calculus of the SWS is verified as long as a uniform field is generated. Current method uses the coefficient of determination (R2) derived of a curve fitting as a quality parameter of reverberation. In this work, the uniformity phenomenon in reveberant fields is studied through the extraction and analysis of statistical estimators used in electromagnetic fields with their equivalency in acoustic waves to implement machine learning classifiers of uniform reverberant fields such as Logistic Regression, LDA, Lineal SVM and Gaussian SVM. The models detect uniform regions with accuracies of 0.749, 0.746, 0.715 and 0.811, respectively.
+ER  - 
+
+TY  - CONF
+TI  - Research on Personalized Eyeball Structure Modeling and Parameter Optimization Algorithm for Refractive Surgery Planning
+T2  - 2025 Asia Conference on Energy Conversion Systems and Power Electronics (AECSPE)
+SP  - 457
+EP  - 462
+AU  - L. Wang
+AU  - Z. Lu
+AU  - Y. Tang
+AU  - Y. Lai
+AU  - M. Zhou
+PY  - 2025
+KW  - Biomedical optical imaging
+KW  - Heuristic algorithms
+KW  - Surgery
+KW  - Data models
+KW  - Adaptive optics
+KW  - Planning
+KW  - Safety
+KW  - Optical refraction
+KW  - Root mean square
+KW  - Optimization
+KW  - personalized eyeball structure modeling
+KW  - parameter optimization
+KW  - refractive surgery planning
+KW  - optimization algorithm
+DO  - 10.1109/AECSPE66597.2025.00082
+JO  - 2025 Asia Conference on Energy Conversion Systems and Power Electronics (AECSPE)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2025 Asia Conference on Energy Conversion Systems and Power Electronics (AECSPE)
+Y1  - 4-6 Sept. 2025
+AB  - This study focuses on personalized eyeball structure modeling and parameter optimization algorithm for refractive surgery planning, aiming at improving the accuracy and safety of surgery by integrating multimodal medical image data and deep learning technology. Firstly, a personalized eyeball structure database including key parameters such as cornea, anterior chamber and lens was constructed, covering 500 clinical cases. Multi-modal data fusion is realized by graph neural network (GNN), and a personalized optical-biomechanical model of the whole eye is established to accurately characterize the optical and biomechanical characteristics of the whole eye. On this basis, a hybrid optimization strategy combining reinforcement learning (RL) and genetic algorithm (GA) is proposed to dynamically adjust the surgical parameters such as laser cutting depth, corneal flap thickness and aspheric correction coefficient, so as to minimize postoperative wavefront aberration and ensure the safety and biomechanical stability of corneal structure. The experimental results show that the root mean square value (RMS) of higher-order aberrations in the optimized algorithm group decreased by 48.1%, the MTF value increased by 35.5%, and the uncorrected visual acuity (UCVA) improved by 71.4% 6 months after operation, and the structural safety of the optimized algorithm group was significantly better than that of the traditional operation group. There was no case of corneal dilatation or RST below 250 μm, and the number of intraoperative parameter adjustments decreased by 87.5%. In addition, the optimized algorithm significantly reduced the incidence of postoperative complications, including refractive regression, corneal dilatation, night glare, dry eye and so on. In the intraoperative real-time performance test, the time of model reconstruction and parameter optimization was shortened to 1/38 and 1/227 of the traditional scheme, respectively, and the total decision-making time was accelerated by about 53 times, which met the needs of rapid decision-making during operation. This study provides an effective technical means for the accurate planning of refractive correction surgery and promotes the development of personalized ophthalmic surgery.
+ER  - 
+
+

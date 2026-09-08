@@ -1,0 +1,847 @@
+TY  - JOUR
+AU  - Zhang, Y.
+AU  - Padhee, S.
+AU  - Yuhas, P.T.
+AU  - Roberts, C.J.
+AU  - Parthasarathy, S.
+TI  - Adaptive Temporal Mixture of Experts for Predicting Stiffness Metrics From the Ocular Response Analyzer and Identifying Keratoconus
+PY  - 2026
+T2  - American Journal of Ophthalmology
+VL  - 286
+SP  - 196
+EP  - 210
+DO  - 10.1016/j.ajo.2026.02.028
+UR  - https://www.scopus.com/pages/publications/105034053318?origin=resultslist
+AB  - PURPOSE: To develop a machine learning–based modeling approach for extracting elastic stiffness estimates from Ocular Response Analyzer (ORA) waveforms. DESIGN: Prospective observational cohort study with model training and testing using a development dataset and validation with an independent validation dataset. METHODS: Participants were prospectively enrolled into 6 cohorts for the development dataset, including control subjects, individuals diagnosed with keratoconus, diabetes mellitus with retinopathy and without retinopathy, primary open-angle glaucoma, and ocular hypertension. An independent validation dataset comprised data for two cohorts, including healthy participants and individuals diagnosed with keratoconus. Intraocular pressure and biomechanical data were collected using the ORA and Corvis ST devices for the development dataset. An Adaptive Temporal Mixture of Experts (AT-MoE) model, incorporating long short-term memory (LSTM) networks with dynamic expert selection, was trained using ORA waveform parameters and raw signals to predict stiffness parameters (SP) from Corvis ST, including SP-A1 representing corneal stiffness, SP-HC representing scleral stiffness, and SSI representing deformation stiffness. Predicted ORA stiffness estimates were independently validated with a separate dataset of keratoconus and healthy eyes. The ORA waveform parameters, as well as applanation and pressure signals, were used as input to the machine learning models to classify eyes with keratoconus versus healthy eyes, which was evaluated with the area under the receiver operating characteristic (AUROC) curves. The primary outcome measures were the predicted ORA stiffness estimates, including corneal stiffness estimate, scleral stiffness estimate, and deformation stiffness estimate. RESULTS: The AT-MoE model significantly outperformed the baseline LSTM in predicting ocular stiffness estimates using ORA input data with reduction of prediction error. The AT-MoE model also resulted in improvement of keratoconus detection performance in the independent validation dataset with AUROC=0.9512, which is similar to performance of tomographic detection approaches. CONCLUSIONS: The AT-MoE model provides a novel and accurate framework for deriving elastic stiffness estimates from ORA waveforms, and offers improved diagnostic capability for keratoconus compared to traditional machine learning models. This method has the potential to expand the utility of the ORA device for biomechanical assessment in clinical settings. © 2026 The Author(s)
+PB  - Elsevier Inc.
+SN  - 00029394 (ISSN)
+LA  - English
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 08 September 2026; CODEN: AJOPA
+ER  -
+
+TY  - JOUR
+AU  - Wan, Q.
+AU  - Wang, Q.
+AU  - Wei, R.
+AU  - Tang, J.
+AU  - Yin, H.
+AU  - Deng, Y.-P.
+AU  - Ma, K.
+TI  - Machine learning-based progress prediction in accelerated cross-linking for Keratoconus
+PY  - 2025
+T2  - Graefe's Archive for Clinical and Experimental Ophthalmology
+VL  - 263
+IS  - 7
+SP  - 1933
+EP  - 1947
+DO  - 10.1007/s00417-025-06792-y
+UR  - https://www.scopus.com/pages/publications/105000830287?origin=resultslist
+AB  - Background: To analyze corneal topographic and biomechanical parameters in keratoconus patients before undergoing accelerated corneal collagen cross-linking (A-CXL) surgery and use machine learning models to identify prognostic factors for disease progression after treatment. Methods: This was a retrospective, single-center study on 95 eyes from 69 keratoconus patients (mean age 21.46 ± 7.07 years) undergoing A-CXL, with 3–22 months follow-up. Corneal tomography (Pentacam) and biomechanical measurements (Corvis ST) were performed at baseline and follow-up visits. Changes in the E-stage were used to define progression. LASSO, XGBoost, and random forest machine learning models were applied to identify prognostic factors. A nomogram was developed to predict progression probabilities. Results: 42.1% of eyes showed progression based on E-stage change. Maximal keratometry (Kmax) and index of surface variance (ISV) were significantly higher in the progression group. The nomogram incorporating Kmax and ISV predicted progression better than individual parameters. The progression rate was 51.4% in high-risk eyes versus 16% in low-risk eyes stratified by the nomogram. Conclusions: Kmax and ISV are important prognostic factors for keratoconus progression after A-CXL. The nomogram can improve prediction accuracy compared to single parameters. It enables personalized risk assessment to guide treatment decisions. © The Author(s), under exclusive licence to Springer-Verlag GmbH Germany, part of Springer Nature 2025.
+PB  - Springer Science and Business Media Deutschland GmbH
+SN  - 0721832X (ISSN)
+LA  - English
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 08 September 2026; CODEN: GACOD
+ER  -
+
+TY  - JOUR
+AU  - Syta, A.
+AU  - Chorągiewicz, T.
+AU  - Gęca, J.
+AU  - Karpiński, R.
+AU  - Wróbel-Dudzińska, D.
+AU  - Podkowiński, A.
+AU  - Maciejewski, M.
+AU  - Głuchowski, D.
+AU  - Jonak, K.E.
+AU  - Rejdak, R.
+AU  - Jonak, K.
+TI  - A deep learning approach for keratoconus detection using spatio-temporal features from corneal imaging
+PY  - 2026
+T2  - Scientific Reports
+VL  - 16
+IS  - 1
+C7  - 24874
+DO  - 10.1038/s41598-026-56383-y
+UR  - https://www.scopus.com/pages/publications/105046910118?origin=resultslist
+AB  - Keratoconus is a progressive corneal disease that requires early and accurate detection to prevent severe visual impairment. This study presents a deep learning-based classification model for distinguishing between healthy and keratoconic eyes using dynamic corneal imaging data from the CORVIS system. A hybrid CNN-RNN architecture was developed, combining a fine-tuned InceptionV3 network for spatial feature extraction with a recurrent LSTM module to capture temporal patterns across image sequences. To ensure robust evaluation, a 10-fold stratified cross-validation strategy was employed, with data splits performed at the patient level to avoid data leakage. The model achieved an average accuracy, precision, recall, and F1-score of approximately 0.90 across folds, demonstrating strong generalization performance. Boxplot visualizations of metric distributions further confirmed model stability and revealed minimal performance variance. Class-wise analysis showed high effectiveness in detecting both healthy and keratoconic cases, although slightly greater variability was observed in the classification of healthy eyes. These results indicate that the proposed method is a promising tool for keratoconus screening and may complement existing diagnostic workflows. Further validation on external datasets is recommended prior to clinical deployment. © The Author(s) 2026.
+PB  - Nature Research
+SN  - 20452322 (ISSN)
+LA  - English
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 08 September 2026
+ER  -
+
+TY  - JOUR
+AU  - Adib-Moghaddam, S.
+AU  - Nassiri, N.
+AU  - Bahman, M.
+AU  - Mohebbi, M.
+AU  - Sheibani, K.
+TI  - A Novel Chaos-inspired Artificial Intelligence-based Model for Keratoconus Prediction
+PY  - 2026
+T2  - Journal of Ophthalmic and Vision Research
+VL  - 21
+C7  - e24
+DO  - 10.18502/jovr.v21.18172
+UR  - https://www.scopus.com/pages/publications/105046577187?origin=resultslist
+AB  - Purpose: To develop a novel chaos-inspired artificial intelligence (AI)-based system for keratoconus prediction. Methods: We constructed, trained, and tested our prediction model using corneal tomography data obtained from Pentacam and Sirius imaging systems. The study included 65 healthy individuals and 48 patients with keratoconus recruited from a private ophthalmology clinic and Bina Eye Hospital in Tehran, Iran. Model development included stratified partitioning of the data into training and testing sets, followed by performance evaluation using standard classification metrics. Scheimpflug-based tomographic parameters were preprocessed, normalized, and analyzed using a chaos-inspired tensor decomposition framework. Results: Using Pentacam data, the model achieved sensitivity and specificity values of 88% and 90%, respectively. When using Sirius data, the sensitivity and specificity increased to 92% and 96%, respectively. Performance metrics were reproducible across repeated random train–test splits, indicating model stability. The chaos-inspired AI-based model demonstrated balanced sensitivity and specificity across both imaging systems, supporting robust discrimination between keratoconus and normal eyes. Conclusion: Given the complex and nonlinear behavior of keratoconus progression, influenced by biomechanical, genetic, and environmental interactions, we developed a novel chaos-inspired AI-based system (Iran Model) capable of accurately detecting keratoconus. Although the findings are promising, further validation in larger cohorts is required. © 2026 Adib-Moghaddam et al.
+PB  - Knowledge E
+SN  - 20082010 (ISSN)
+LA  - English
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 08 September 2026
+ER  -
+
+TY  - JOUR
+AU  - Yang, L.
+AU  - Qi, K.
+AU  - Zhang, P.
+AU  - Cheng, J.
+AU  - Soha, H.
+AU  - Jin, Y.
+AU  - Ci, H.
+AU  - Zheng, X.
+AU  - Wang, B.
+AU  - Mei, Y.
+AU  - Chen, S.
+AU  - Wang, J.
+TI  - Diagnosis of Forme Fruste Keratoconus Using Corvis ST Sequences with Digital Image Correlation and Machine Learning
+PY  - 2024
+T2  - Bioengineering
+VL  - 11
+IS  - 5
+C7  - 429
+DO  - 10.3390/bioengineering11050429
+UR  - https://www.scopus.com/pages/publications/85194403126?origin=resultslist
+AB  - Purpose: This study aimed to employ the incremental digital image correlation (DIC) method to obtain displacement and strain field data of the cornea from Corvis ST (CVS) sequences and access the performance of embedding these biomechanical data with machine learning models to distinguish forme fruste keratoconus (FFKC) from normal corneas. Methods: 100 subjects were categorized into normal (N = 50) and FFKC (N = 50) groups. Image sequences depicting the horizontal cross-section of the human cornea under air puff were captured using the Corvis ST tonometer. The high-speed evolution of full-field corneal displacement, strain, velocity, and strain rate was reconstructed utilizing the incremental DIC approach. Maximum (max-) and average (ave-) values of full-field displacement V, shear strain γxy, velocity VR, and shear strain rate γxyR were determined over time, generating eight evolution curves denoting max-V, max-γxy, max-VR, max-γxyR, ave-V, ave-γxy, ave-VR, and ave-γxyR, respectively. These evolution data were inputted into two machine learning (ML) models, specifically Naïve Bayes (NB) and Random Forest (RF) models, which were subsequently employed to construct a voting classifier. The performance of the models in diagnosing FFKC from normal corneas was compared to existing CVS parameters. Results: The Normal group and the FFKC group each included 50 eyes. The FFKC group did not differ from healthy controls for age (p = 0.26) and gender (p = 0.36) at baseline, but they had significantly lower bIOP (p < 0.001) and thinner central cornea thickness (CCT) (p < 0.001). The results demonstrated that the proposed voting ensemble model yielded the highest performance with an AUC of 1.00, followed by the RF model with an AUC of 0.99. Radius and A2 Time emerged as the best-performing CVS parameters with AUC values of 0.948 and 0.938, respectively. Nonetheless, no existing Corvis ST parameters outperformed the ML models. A progressive enhancement in performance of the ML models was observed with incremental time points during the corneal deformation. Conclusion: This study represents the first instance where displacement and strain data following incremental DIC analysis of Corvis ST images were integrated with machine learning models to effectively differentiate FFKC corneas from normal ones, achieving superior accuracy compared to existing CVS parameters. Considering biomechanical responses of the inner cornea and their temporal pattern changes may significantly improve the early detection of keratoconus. © 2024 by the authors.
+PB  - Multidisciplinary Digital Publishing Institute (MDPI)
+SN  - 23065354 (ISSN)
+LA  - English
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 08 September 2026
+ER  -
+
+TY  - JOUR
+AU  - Tan, Z.
+AU  - Chen, X.
+AU  - Li, K.
+AU  - Liu, Y.
+AU  - Cao, H.
+AU  - Li, J.
+AU  - Jhanji, V.
+AU  - Zou, H.
+AU  - Liu, F.
+AU  - Wang, R.
+AU  - Wang, Y.
+TI  - Artificial Intelligence–Based Diagnostic Model for Detecting Keratoconus Using Videos of Corneal Force Deformation
+PY  - 2022
+T2  - Translational Vision Science and Technology
+VL  - 11
+IS  - 9
+C7  - 32
+DO  - 10.1167/TVST.11.9.32
+UR  - https://www.scopus.com/pages/publications/85139535730?origin=resultslist
+AB  - Purpose: To develop a novel method based on biomechanical parameters calculated from raw corneal dynamic deformation videos to quickly and accurately diagnose keratoconus using machine learning. Methods: The keratoconus group was included according to Rabinowitz’s criteria, and the normal group included corneal refractive surgery candidates. Independent biomechanical parameters were calculated from dynamic corneal deformation videos. A novel neural network model was trained to diagnose keratoconus. Tenfold cross-validation was performed, and the sample set was divided into a training set for training, a validation set for parameter validation, and a testing set for performance evaluation. External validation was performed to evaluate the model’s generalizability. Results: A novel intelligent diagnostic model for keratoconus based on a five-layer feedforward network was constructed by calculating four biomechanical characteristics, including time of the first applanation, deformation amplitude at the highest concav-ity, central corneal thickness, and radius at the highest concavity. The model was able to diagnose keratoconus with 99.6% accuracy, 99.3% sensitivity, 100% specificity, and 100% precision in the sample set (n = 276), and it achieved an accuracy of 98.7%, sensitivity of 97.4%, specificity of 100%, and precision of 100% in the external validation set (n = 78). Conclusions: In the absence of corneal topographic examination, rapid and accurate diagnosis of keratoconus is possible with the aid of machine learning. Our study provides a new potential approach and sheds light on the diagnosis of keratoconus from a purely corneal biomechanical perspective. Translational Relevance: Our findings could help improve the diagnosis of keratoconus based on corneal biomechanical properties. © 2022 The Authors.
+PB  - Association for Research in Vision and Ophthalmology Inc.
+SN  - 21642591 (ISSN)
+LA  - English
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 08 September 2026
+ER  -
+
+TY  - JOUR
+AU  - Tai, H.-Y.
+AU  - Lin, J.-J.
+AU  - Huang, Y.-H.
+AU  - Shih, P.-J.
+AU  - Wang, I.-J.
+AU  - Yen, J.-Y.
+TI  - Correlation between corneal dynamic responses and keratoconus topographic parameters
+PY  - 2022
+T2  - Journal of International Medical Research
+VL  - 50
+IS  - 6
+DO  - 10.1177/03000605221108100
+UR  - https://www.scopus.com/pages/publications/85133105686?origin=resultslist
+AB  - Objective: To investigate the correlation between corneal biomechanical properties and topographic parameters using machine learning networks for automatic severity diagnosis and reference benchmark construction. Methods: This was a retrospective study involving 31 eyes from 31 patients with keratonus. Two clustering approaches were used (i.e., shape-based and feature-based). The shape-based method used a keratoconus benchmark validated for indicating the severity of keratoconus. The feature-based method extracted imperative features for clustering analysis. Results: There were strong correlations between the symmetric modes and the keratoconus severity and between the asymmetric modes and the location of the weak centroid. The Pearson product-moment correlation coefficient (PPMC) between the symmetric mode and normality was 0.92 and between the asymmetric mode and the weak centroid value was 0.75. Conclusion: This study confirmed that there is a relationship between the keratoconus signs obtained from topography and the corneal dynamic behaviour captured by the Corvis ST device. Further studies are required to gather more patient data to establish a more extensive database for validation. © The Author(s) 2022.
+PB  - SAGE Publications Ltd
+SN  - 03000605 (ISSN)
+LA  - English
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 08 September 2026; CODEN: JIMRB
+ER  -
+
+TY  - JOUR
+AU  - Quanchareonsap, W.
+AU  - Kasetsuwan, N.
+AU  - Reinprayoon, U.
+AU  - Piyacomn, Y.
+AU  - Wungcharoen, T.
+AU  - Jermjutitham, M.
+TI  - Deep Learning Algorithm for Keratoconus Detection from Tomographic Maps and Corneal Biomechanics: A Diagnostic Study
+PY  - 2024
+T2  - Journal of Current Ophthalmology
+VL  - 36
+IS  - 1
+SP  - 46
+EP  - 53
+DO  - 10.4103/joco.joco_18_24
+UR  - https://www.scopus.com/pages/publications/85207268270?origin=resultslist
+AB  - Purpose: To develop an artificial intelligence (AI) approach for differentiating between normal cornea, subclinical, and keratoconus (KC) using tomographic maps from Pentacam (Oculus) and corneal biomechanics from Corvis ST (Oculus). Methods: A total of 1,668 tomographic (769 patients) and 611 biomechanical (307 patients) images from the Chula Refractive Surgery Center, King Chulalongkorn Memorial Hospital were included. The sample size was divided into the Pentacam and combined Pentacam-Corvis groups. Different convolutional neural network approaches were used to enhance the KC and subclinical KC detection performance. Results: AI model 1, which obtained refractive maps from Pentacam, achieved an area under the receiver operating characteristic curve (AUC) of 0.938 and accuracy of 0.947 (sensitivity, 90.8% and specificity, 96.9%). AI model 2, which added dynamic corneal response and the Vinciguerra screening report from Corvis ST to AI Model 1, achieved an AUC of 0.985 and accuracy of 0.956 (sensitivity, 93.0% and specificity, 94.3%). AI model 3, which added the corneal biomechanical index to AI Model 2, reached an AUC of 0.991 and accuracy of 0.956 (sensitivity, 93.0% and specificity, 94.3%). Conclusions: Our study showed that AI models using either anterior corneal curvature alone or combined with corneal biomechanics could help classify normal and keratoconic corneas, which would make diagnosis more accurate and would be helpful in decision-making for the treatment.  Copyright © 2024 Journal of Current Ophthalmology.
+PB  - Wolters Kluwer Medknow Publications
+SN  - 24522325 (ISSN)
+LA  - English
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 08 September 2026
+ER  -
+
+TY  - JOUR
+AU  - Song, Y.
+AU  - Feng, Y.
+AU  - Qu, M.
+AU  - Ma, Q.
+AU  - Tian, H.
+AU  - Li, D.
+AU  - He, R.
+TI  - Analysis of the diagnostic accuracy of Belin/Ambrósio Enhanced Ectasia and Corvis ST parameters for subclinical keratoconus
+PY  - 2023
+T2  - International Ophthalmology
+VL  - 43
+IS  - 5
+SP  - 1465
+EP  - 1475
+DO  - 10.1007/s10792-022-02543-8
+UR  - https://www.scopus.com/pages/publications/85140122496?origin=resultslist
+AB  - Objective: To investigate the diagnostic accuracy of the parameters in the Belin/Ambrósio Enhanced Ectasia Display built in Pentacam, which is designed for the screening of subclinical keratoconus (SKC) built in Pentacam, and the parameters in Corneal visualization Scheimpflug technology (Corvis ST). Methods: A retrospective study: The fellow eyes of unilateral keratoconus cases were diagnosed with SKC. Patients presented to Shanxi Eye Hospital with SKC from October 2020 to November 2021 were included as the SKC group, and myopic patients undergoing corneal refractive surgery at the Refractive Surgery Department in our hospital within the same period were included as the control group. The Belin/Ambrósio and Corvis ST parameters were extracted from the system and analyzed using independent samples t test. Receiver operating curves (ROCs) were also created to test the diagnostic accuracy of each parameter. Results: There were 70 patients (70 eyes) in the SKC group and 137 patients (137 eyes) in the control group. For Corvis ST parameters, Radius (P = 0.021), PachySlope (P = 0.040), SP-A1 (P = 0.002), A2 Deformation Amp. (P = 0.028), A2 Deflection Length (P < 0.001), Max ICR (P = 0.005), DA Ratio Max (1 mm) (P = 0.023), IR (P = 0.016), CBI (P = 0.003) and TBI (P < 0.001) were statistically different between the two groups. For Belin/Ambrósio parameters, PPI min. Axis, ART min, ART max, ART avg, Pachy min, Front K2, Astig, BAD-Df, BAD-Db, BAD-Dp, BAD-Dt, BAD-Da, BAD-D, PPI min, PPI max, PPI max. Axis, PPI avg and Dist.Apex-Thin.Loc. were significantly different between the two groups (all p < 0.001). TBI and BAD-D showed the best diagnostic accuracy, with AUCs of 0.944 and 0.965, respectively. Conclusions: Some Belin/Ambrósio and Corvis ST parameters differed between SKC eyes and eyes with normal cornea. TBI and BAD-D showed the ideal diagnostic performance for SKC. In clinical practice, conventional corneal topography could not be replaced by Corvis ST. © 2022, The Author(s), under exclusive licence to Springer Nature B.V.
+PB  - Springer Science and Business Media B.V.
+SN  - 01655701 (ISSN)
+LA  - English
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 08 September 2026; CODEN: INOPD
+ER  -
+
+TY  - JOUR
+AU  - Huo, Y.
+AU  - Xie, R.
+AU  - Qu, Z.
+AU  - Li, Y.
+AU  - Wang, S.
+AU  - Li, J.
+AU  - Hou, J.
+AU  - Zou, H.
+AU  - Li, X.
+AU  - Wang, Y.
+TI  - Predicting Early Keratoconus Progression Using Biomechanics via Multi-Machine Learning: A Multicenter 2-Year Prospective Cohort Study
+PY  - 2026
+T2  - Clinical and Experimental Ophthalmology
+VL  - 54
+IS  - 4
+SP  - 442
+EP  - 451
+DO  - 10.1111/ceo.70076
+UR  - https://www.scopus.com/pages/publications/105029872448?origin=resultslist
+AB  - Background: This study aimed to develop and validate a biomechanical early progression index (BEPI) based on machine learning algorithms, intended to predict early keratoconus progression at the first visit. Methods: This multicenter prospective cohort study recruited 247 eyes of 247 participants from 3 centers; 225 completed all visits and were divided into a training and validation cohort. Corvis ST and Pentacam were used to obtain biomechanical and tomographic data. Based on disease progression during the follow-up period, predictive models were constructed using biomechanical data by applying Random Forest, XGBoost, Naïve Bayes classifier, K-Nearest Neighbours and Support Vector Machine. Results: In the training cohort (n = 157), 66 eyes remained stable after a mean period of 25.18 ± 4.17 months, whereas 91 eyes demonstrated progression after 6.74 ± 2.53 months. The random forest provided the highest predictive performance and was designated as BEPI. With a cutoff value of 0.528, BEPI achieved 0.989 sensitivity and 0.985 specificity in distinguishing between stable and progressive cases. In the external validation cohort (n = 68), 31 eyes remained stable after 23.16 ± 6.75 months and 37 eyes progressed after 7.03 ± 3.42 months of follow-up. BEPI demonstrated the highest predictive performance, with an accuracy of 0.941 and an F1-score of 0.947. Conclusion: The machine learning-based index BEPI derived from corneal biomechanics enabled the accurate prediction of early keratoconus progression at the first visit, with an accuracy of 0.941. BEPI provides clinicians with a novel index for the accurate evaluation of early keratoconus progression, facilitating personalised clinical decision-making to preserve vision and improve prognosis. © 2026 Royal Australian and New Zealand College of Ophthalmologists.
+PB  - John Wiley and Sons Inc
+SN  - 14426404 (ISSN)
+LA  - English
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 08 September 2026; CODEN: CEOPB
+ER  -
+
+TY  - JOUR
+AU  - Kiristioglu, M.O.
+AU  - Akova, B.
+AU  - Sogutlu Sari, E.
+AU  - Baykara, M.
+TI  - Anterior segment optical coherence tomography in corneal diseases: A bibliometric analysis and visualization research of global research trends (1994–2024)
+PY  - 2025
+T2  - Medicine (United States)
+VL  - 104
+IS  - 48
+SP  - e45679
+DO  - 10.1097/MD.0000000000045679
+UR  - https://www.scopus.com/pages/publications/105023453592?origin=resultslist
+AB  - Purpose: – This study provides a bibliometric analysis of global research on anterior segment optical coherence tomography (AS-OCT) in corneal diseases, mapping key research trajectories, collaborations, and emerging trends. Methods: – A systematic search in the Web of Science Core Collection on January 1, 2025, retrieved 3634 records (1994–2024). After excluding non-English publications, non-ophthalmology studies, and non-corneal research, 2079 publications were analyzed using VOSviewer and CiteSpace for citation networks, coauthorship trends, and keyword co-occurrence. Results: – AS-OCT research has grown significantly (Mann–Kendall τ = 0.929, P < .001). The United States led in publications (639 papers, 19, 594 citations), followed by China (333 papers, 4502 citations). The University of California was the most productive institution. The first AS-OCT study, published in the Archives of Ophthalmology (1994) by Izatt JA et al, marked the field’s inception. The most cited article was Huang et al’s 1991 Science paper on optical coherence tomography. Recent trends highlight the integration of artificial intelligence, deep learning, and optical coherence elastography in AS-OCT applications. The top 3 contributing journals were Cornea, Journal of Refractive Surgery, and Journal of Cataract and Refractive Surgery. Coauthorship analysis identified Jodhbir S. Mehta and David Huang as central figures in AS-OCT research collaborations. Conclusion: – AS-OCT research has expanded significantly, enhancing diagnostics, surgical planning, and disease monitoring. Artificial intelligence-driven analytics and optical coherence elastography are promising future directions. This bibliometric analysis guides advancing AS-OCT research and clinical applications. © 2025
+PB  - Lippincott Williams and Wilkins
+SN  - 00257974 (ISSN)
+LA  - English
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 08 September 2026; CODEN: MEDIA
+ER  -
+
+TY  - JOUR
+AU  - Ren, S.
+AU  - Yang, K.
+AU  - Xu, L.
+AU  - Fan, Q.
+AU  - Gu, Y.
+AU  - Pang, C.
+AU  - Zhao, D.
+TI  - Machine learning analysis with the comprehensive index of corneal tomographic and biomechanical parameters in detecting pediatric subclinical keratoconus
+PY  - 2023
+T2  - Frontiers in Bioengineering and Biotechnology
+VL  - 11
+C7  - 1273500
+DO  - 10.3389/fbioe.2023.1273500
+UR  - https://www.scopus.com/pages/publications/85180123084?origin=resultslist
+AB  - Background: Keratoconus (KC) occurs at puberty but diagnosis is focused on adults. The early diagnosis of pediatric KC can prevent its progression and improve the quality of life of patients. This study aimed to evaluate the ability of corneal tomographic and biomechanical variables through machine learning analysis to detect subclinical keratoconus (SKC) in a pediatric population. Methods: Fifty-two KC, 52 SKC, and 52 control pediatric eyes matched by age and gender were recruited in a case-control study. The corneal tomographic and biomechanical parameters were measured by professionals. A linear mixed-effects test was used to compare the differences among the three groups and a least significant difference analysis was used to conduct pairwise comparisons. The receiver operating characteristic (ROC) curve and the Delong test were used to evaluate diagnostic ability. Variables were used in a multivariate logistic regression in the machine learning analysis, using a stepwise variable selection to decrease overfitting, and comprehensive indices for detecting pediatric SKC eyes were produced in each step. Results: PE, BAD-D, and TBI had the highest area under the curve (AUC) values in identifying pediatric KC eyes, and the corresponding cutoff values were 12 μm, 2.48, and 0.6, respectively. For discriminating SKC eyes, the highest AUC (95% CI) was found in SP A1 with a value of 0.84 (0.765, 0.915), and BAD-D was the best parameter among the corneal tomographic parameters with an AUC (95% CI) value of 0.817 (0.729, 0.886). Three models were generated in the machine learning analysis, and Model 3 (y = 0.400*PE + 1.982* DA ratio max [2 mm]−0.072 * SP A1−3.245) had the highest AUC (95% CI) value, with 90.4% sensitivity and 76.9% specificity, and the cutoff value providing the best Youden index was 0.19. Conclusion: The criteria of parameters for diagnosing pediatric KC and SKC eyes were inconsistent with the adult population. Combined corneal tomographic and biomechanical parameters could enhance the early diagnosis of young patients and improve the inadequate representation of pediatric KC research. Copyright © 2023 Ren, Yang, Xu, Fan, Gu, Pang and Zhao.
+PB  - Frontiers Media SA
+SN  - 22964185 (ISSN)
+LA  - English
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 08 September 2026
+ER  -
+
+TY  - JOUR
+AU  - Raghavan, P.
+AU  - Balasubramanian, C.
+AU  - Jarin, T.
+TI  - Dual vision transformer with bio-inspired optimization for explainable keratoconus classification
+PY  - 2026
+T2  - International Ophthalmology
+VL  - 46
+IS  - 1
+C7  - 60
+DO  - 10.1007/s10792-025-03929-0
+UR  - https://www.scopus.com/pages/publications/105026840430?origin=resultslist
+AB  - Background: Keratoconus (KCN) is a progressive degenerative corneal disorder characterized by corneal thinning and cone-shaped protrusion, leading to significant visual impairment if not detected early. Accurate staging of KCN using corneal topographic maps is critical for timely diagnosis and effective treatment planning. Methods: This study proposes an enhanced deep learning framework for KCN stage classification based on corneal topographic images. The model employs a Dual Vision Transformer (DViT) to effectively capture both local and global spatial features. To optimize model performance, the Electric Eel Foraging Optimizer (EEFO) is utilized for tuning attention weights and hyperparameters of the DViT architecture. Additionally, model interpretability is enhanced through Local Interpretable Model-Agnostic Explanations (LIME) and SHapley Additive exPlanations (SHAP), enabling visualization of corneal regions influencing classification decisions. Results: Experimental evaluations conducted on a keratoconus dataset demonstrate that the proposed DViT–EEFO model outperforms existing approaches, achieving an accuracy of 99.2%, recall of 99.3%, and precision of 99.5%. Interpretability analyses confirm that the model focuses on clinically relevant corneal regions during decision-making. Conclusion: The proposed DViT–EEFO framework delivers high classification performance and improved interpretability, highlighting its strong potential as a reliable clinical decision support tool for early keratoconus diagnosis and treatment planning. © The Author(s), under exclusive licence to Springer Nature B.V. 2026.
+PB  - Springer Science and Business Media B.V.
+SN  - 01655701 (ISSN)
+LA  - English
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 08 September 2026; CODEN: INOPD
+ER  -
+
+TY  - JOUR
+AU  - Esporcatte, L.P.G.
+AU  - Salomão, M.Q.
+AU  - Machado, A.P.
+AU  - Ambrósio Jr, R.
+TI  - The power of predictive artificial intelligence for the detection of ectasia
+PY  - 2025
+T2  - Expert Review of Ophthalmology
+VL  - 20
+IS  - 6
+SP  - 387
+EP  - 400
+DO  - 10.1080/17469899.2025.2594819
+UR  - https://www.scopus.com/pages/publications/105023909397?origin=resultslist
+AB  - Introduction: Artificial intelligence (AI) is transforming the diagnosis and management of corneal ectatic diseases (CED) and ectasia risk assessment (ERA) before refractive surgery. Predictive models offer promise for earlier detection and personalized patient care. Areas covered: This review summarizes AI applications in CED and ERA, covering keratoconus screening, staging, progression monitoring, and risk stratification. ERA is explained within the two-hit hypothesis, which suggests that intrinsic susceptibility (the first hit) and surgical impact (the second hit) are key factors. AI-based indices outperform traditional tools, particularly in detecting subclinical ectasia and identifying risk in fellow eyes after monocular surgery, and in very asymmetric ectasia. The TBIv2, created by the Brazilian BrAIN group, demonstrated the highest diagnostic accuracy. Among tomographic indices, BAD-Dv4 exceeded PRFI and BAD-Dv3. Population-optimized index (e.g. cTBI, cCBI) improved performance in Chinese cohorts. The Relational Tissue Altered (RTA) metric outperformed relational stromal bed and percent tissue altered (PTA) in assessing surgical risk. Expert opinion: AI enhances the safety of refractive surgery through individualized risk assessment, but it should support, not replace, clinical judgment. Population-specific models are essential. Future advances include integrating layered tomography, biomechanics, genetic markers, and behavioral data, such as eye rubbing, to advance personalized ectasia management further. © 2025 Informa UK Limited, trading as Taylor & Francis Group.
+PB  - Taylor and Francis Ltd.
+SN  - 17469899 (ISSN)
+LA  - English
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 08 September 2026
+ER  -
+
+TY  - JOUR
+AU  - Balaji, K.
+AU  - Gobalakrishnan, N.
+TI  - Biomedical image-based keratoconus classification using convolutional transformers and grey goose optimization
+PY  - 2026
+T2  - Biomedical Signal Processing and Control
+VL  - 111
+C7  - 108357
+DO  - 10.1016/j.bspc.2025.108357
+UR  - https://www.scopus.com/pages/publications/105011593698?origin=resultslist
+AB  - Background: Keratoconus (KCN) is a progressive corneal disorder that leads to visual distortion and increases the risk of complications during refractive surgical procedures. Accurate and early diagnosis is critical for effective clinical management. Objective: This work presents a novel deep learning model for keratoconus classification from corneal topographic images. Problem: Conventional diagnostic models are based on corneal topography and biomechanical properties. These processes are time-consuming and prone to variability. Methodology: This work presents an optimization based Deep Learning (DL) model Grey Goose Optimization (GGO) based Convolutional Transformer (CT) model for KCN classification. The model considers the feature extraction capabilities of convolutional neural network (CNN) and the attention mechanism of transformers for enhancing classification accuracy. The GGO is integrated for fine-tuning the hyperparameters of the model and improving its robustness. Findings: The proposed approach is evaluated on a Keratoconus detection dataset and shown superior performance compared to conventional DL models. The outcomes shows the robustness of the suggested approach in correctly categorizing KCN by achieving accuracy of 99.2% and precision of 98.9% Conclusion: The proposed CT-GGO provides the way for automatic and reliable diagnostic tools in ophthalmology. Recommendations: Future research will demonstrate cross-center validation, larger data, and multi-modal inputs for improving model generalization and interpretability. © 2025 Elsevier Ltd
+PB  - Elsevier Ltd
+SN  - 17468094 (ISSN)
+LA  - English
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 08 September 2026
+ER  -
+
+TY  - JOUR
+AU  - Herber, R.
+AU  - Pillunat, L.E.
+AU  - Raiskup, F.
+TI  - Development of a classification system based on corneal biomechanical properties using artificial intelligence predicting keratoconus severity
+PY  - 2021
+T2  - Eye and Vision
+VL  - 8
+IS  - 1
+C7  - 21
+DO  - 10.1186/s40662-021-00244-4
+UR  - https://www.scopus.com/pages/publications/85129479025?origin=resultslist
+AB  - Background: To investigate machine-learning (ML) algorithms to differentiate corneal biomechanical properties between different topographical stages of keratoconus (KC) by dynamic Scheimpflug tonometry (CST, Corvis ST, Oculus, Wetzlar, Germany). In the following, ML models were used to predict the severity in a training and validation dataset. Methods: Three hundred and eighteen keratoconic and one hundred sixteen healthy eyes were included in this monocentric and cross-sectional pilot study. Dynamic corneal response (DCR) and corneal thickness related (pachymetric) parameters from CST were chosen by appropriated selection techniques to develop a ML algorithm. The stage of KC was determined by the topographical keratoconus classification system (TKC, Pentacam, Oculus). Patients who were classified as TKC 1, TKC 2 and TKC 3 were assigned to subgroup mild, moderate, and advanced KC. If patients were classified as TKC 1–2, TKC 2–3 or TKC 3–4, they were assigned to subgroups according to the normative range of further corneal indices (index of surface variance, keratoconus index and minimum radius). Patients classified as TKC 4 were not included in this study due to the limited amount of cases. Linear discriminant analysis (LDA) and random forest (RF) algorithms were used to develop the classification models. Data were divided into training (70% of cases) and validation (30% of cases) datasets. Results: LDA model predicted healthy, mild, moderate, and advanced KC eyes with a sensitivity (Sn)/specificity (Sp) of 82%/97%, 73%/81%, 62%/83% and 68%/95% from a validation dataset, respectively. For the RF model, a Sn/Sp of 91%/94%, 80%/90%, 63%/87%, 72%/95% could be reached for predicting healthy, mild, moderate, and advanced KC eyes, respectively. The overall accuracy of LDA and RF was 71% and 78%, respectively. The accuracy for KC detection including all subgroups of KC severity was 93% in both models. Conclusion: The RF model showed good accuracy in predicting healthy eyes and various stages of KC. The accuracy was superior with respect to the LDA model. The clinical importance of the models is that the standalone dynamic Scheimpflug tonometry is able to predict the severity of KC without having the keratometric data. Trial registration: NCT04251143 at Clinicaltrials.gov, registered at 12 March 2018 (Retrospectively registered). © 2021, The Author(s).
+PB  - BioMed Central Ltd
+SN  - 23260254 (ISSN)
+LA  - English
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 08 September 2026
+ER  -
+
+TY  - JOUR
+AU  - Shi, T.
+TI  - Machine learning predictive model based on the corneal biomechanics of clinical data
+PY  - 2025
+T2  - Photodiagnosis and Photodynamic Therapy
+VL  - 56
+C7  - 105262
+DO  - 10.1016/j.pdpdt.2025.105262
+UR  - https://www.scopus.com/pages/publications/105024339782?origin=resultslist
+AB  - Objective: To develop and validate a machine learning model for predicting postoperative corneal ectasia risk after refractive surgery by integrating multidimensional preoperative and postoperative biomechanical parameters. Methods: A retrospective cohort of 200 patients who underwent LASIK or SMILE at Shenyang Xingqi Eye Hospital between January 2023 and December 2024 was analyzed. Variables including corneal morphology, biomechanics, and early postoperative changes were screened using Least Absolute Shrinkage and Selection Operator (LASSO) regression. Multiple algorithms—generalized linear model (GLM), gradient boosting machine (GBM), and support vector machine (SVM)—were compared via 10-fold cross-validation. The optimal SVM model was fine-tuned through grid search and further tested in a prospective temporal validation cohort (n = 40, January–September 2025). Model performance was evaluated by AUC, calibration, and decision-curve analysis. Results: LASSO identified PreopCCT, PreopKmax, CH, CRF, and early postoperative changes (PostopCCTChange1m, PostopKmaxChange3m) as key predictors. The SVM model achieved the best discrimination among all models (AUC = 0.88 in cross-validation). In prospective validation, the locked SVM maintained high accuracy (AUC = 0.984, 95 % CI 0.944–1.000; sensitivity = 0.88; specificity = 0.90) with good calibration (slope = 0.96; Brier = 0.098) and net clinical benefit across threshold probabilities of 0.1–0.7. Conclusion: The optimized SVM model provides a reliable, data-driven approach for individualized ectasia-risk assessment in refractive surgery. By combining biomechanical and tomographic features, it enables early identification of high-risk patients and supports personalized surgical planning and postoperative monitoring. Further multi-center and long-term validation is warranted to enhance generalizability and clinical implementation. © 2025 The Author. Published by Elsevier B.V. This is an open access article under the CC BY-NC-ND license. http://creativecommons.org/licenses/by-nc-nd/4.0/
+PB  - Elsevier B.V.
+SN  - 15721000 (ISSN)
+LA  - English
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 08 September 2026
+ER  -
+
+TY  - JOUR
+AU  - Syta, A.
+AU  - Podkowiński, A.
+AU  - Chorągiewicz, T.
+AU  - Karpiński, R.
+AU  - Gęca, J.
+AU  - Wróbel-Dudzińska, D.
+AU  - Jonak, K.E.
+AU  - Głuchowski, D.
+AU  - Maciejewski, M.
+AU  - Rejdak, R.
+AU  - Jonak, K.
+TI  - Machine learning-assisted early detection of keratoconus: a comparative analysis of corneal topography and biomechanical data
+PY  - 2025
+T2  - Scientific Reports
+VL  - 15
+IS  - 1
+C7  - 24399
+DO  - 10.1038/s41598-025-09694-5
+UR  - https://www.scopus.com/pages/publications/105010217704?origin=resultslist
+AB  - Keratoconus is a progressive eye disease characterized by the thinning and bulging of the cornea, leading to visual impairment. Early and accurate diagnosis is crucial for effective management and treatment. This study investigates the application of machine learning models to identify keratoconus based on corneal topography and biomechanical data. We collected a dataset comprising 144 corneal scans from adults aged 18–35, including an equal proportion of keratoconus and normal cases. Various machine learning algorithms were trained and evaluated on datasets containing different parameters obtained using the Pentacam device. The Random Forest algorithm demonstrated the highest reliability, achieving an accuracy of 98% during training and 96% on the test set, while also identifying the most diagnostically relevant measurements. Unlike prior studies, our approach enables detailed comparison between model-selected features and clinically recognized diagnostic parameters. This interpretability provides a clinically meaningful bridge between AI-driven predictions and expert-based decision-making. The results suggest that machine learning models, particularly Random Forest, can effectively aid in the early detection of keratoconus in young individuals, potentially improving patient outcomes through timely intervention. © The Author(s) 2025.
+PB  - Nature Research
+SN  - 20452322 (ISSN)
+LA  - English
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 08 September 2026
+ER  -
+
+TY  - JOUR
+AU  - Roszkowska, A.M.
+AU  - Mancini, M.
+AU  - Gargiulo, L.
+AU  - Pepe, G.
+AU  - Gargano, R.
+AU  - Aversa, T.
+AU  - Wasniewska, M.
+TI  - Corneal biomechanics alterations and increased risk for corneal ectasia in Turner syndrome
+PY  - 2026
+T2  - International Ophthalmology
+VL  - 46
+IS  - 1
+C7  - 151
+DO  - 10.1007/s10792-026-04018-6
+UR  - https://www.scopus.com/pages/publications/105032847710?origin=resultslist
+AB  - Purpose: To assess corneal tomographic parameters and biomechanics of patients with Turner syndrome. Methods: Thirty-four eyes of 17 patients with Turner Syndrome (TS) and 20 eyes of 10 healthy females were evaluated for corneal parameters and biomechanics. The main outcome measures were anterior and posterior keratometry (K-meanAnt and K-meanPost) anterior and posterior elevation (AE, PE), central corneal thickness (CCT), anterior and posterior Q values (QAnt and QPost), corneal volume (CV), Belin-Ambrosio Tomographic Index (BAD), and biomechanical parameters such as Corneal Biomechanical Index (CBI), and Tomography-Biomechanical Index (TBI). The group of patients with TS was compared to a control group for all evaluated parameters. Results: Significantly higher values of PE, CCT, CV, BAD, and TBI were observed in Turner Syndrome. The TS group displayed significantly lower K-meanPost, QAnt, and QPost values. BAD, CBI, and TBI values exceeding the cut off were observed in nine eyes (26.47%) in the TS group and three eyes (15%) in the control group. Patients with TS showed altered BAD values (odds ratio of 4.88). The TBI index was altered, with an odds ratio of 7.33, suggestive for significantly higher risk of ectasia. The CBI index was unvaried between groups. The cases with pathological BAD value were observed in individuals with mosaicism, suggesting a potential link between this karyotype and BAD alterations. Conclusions: Patients with TS exhibit altered biomechanical values indicating a significant risk for corneal ectasia. Periodic monitoring of corneal parameters in this population is necessary to detect early signs of ectasia. © The Author(s), under exclusive licence to Springer Nature B.V. 2026.
+PB  - Springer Science and Business Media B.V.
+SN  - 01655701 (ISSN)
+LA  - English
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 08 September 2026; CODEN: INOPD
+ER  -
+
+TY  - JOUR
+AU  - Silver, F.H.
+AU  - Deshmukh, T.
+AU  - Benedetto, D.
+AU  - Asfaw, M.
+AU  - Doyle, O.
+AU  - Kozachuk, N.
+AU  - Li, K.
+TI  - The Contribution of the Limbus and Collagen Fibrils to Corneal Biomechanical Properties: Estimation of the Low-Strain In Vivo Elastic Modulus and Tissue Strain
+PY  - 2024
+T2  - Biomimetics
+VL  - 9
+IS  - 12
+C7  - 758
+DO  - 10.3390/biomimetics9120758
+UR  - https://www.scopus.com/pages/publications/85213365714?origin=resultslist
+AB  - We have compared the biomechanical properties of human and porcine corneas using vibrational optical coherence tomography (VOCT). The elastic modulus of the cornea has been previously reported in the literature to vary from about several kPa to more than several GPa based on the results of different techniques. In addition, the formation of corneal cones near the central cornea in keratoconus has been observed in the clinic. Measurements of the resonant frequency and morphology of human and porcine corneas were used to evaluate the role of the limbus in corneal stabilization, the effect of Bowman’s layer, and the effect of collagen content on the low-strain corneal biomechanics. The results of these studies indicate that limbus stability plays an important anatomic role in preventing folding, corneal slippage, and cone formation. Machine learning studies of both human and porcine corneas indicate that Bowman’s membrane, like that of the collagen fibrils found in the anterior corneal stroma, contributes to the 110–120 Hz resonant frequency peak. Finite element and SOLIDWORKS models of normal and keratoconus corneas suggest that the deformation of the cornea is the highest at the central zone and is higher in keratoconus corneas compared to normal controls. VOCT results suggest that although collagen fibril slippage occurs first at the limbus, cone formation in keratoconus occurs centrally/paracentrally, where stress concentration and deformation due to intraocular forces are the highest. Cone formation occurs at the points of maximum curvature. Results of these studies indicate the elastic modulus of cornea fibrillar collagen dictates the corneal elastic modulus at low strains. These results suggest that tension in the cornea at the limbus results in deformation into the low modulus region of the J-shaped stress–strain curve, resulting in an in vivo strain of less than about 10%. We propose that tension in the cornea provides a baseline force that regulates corneal epithelial regeneration as well as corneal lamellae composition and matrix turnover. © 2024 by the authors.
+PB  - Multidisciplinary Digital Publishing Institute (MDPI)
+SN  - 23137673 (ISSN)
+LA  - English
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 08 September 2026
+ER  -
+
+TY  - JOUR
+AU  - Li, L.
+AU  - Xiang, Y.
+AU  - Chen, X.
+AU  - Lin, D.
+AU  - Zhao, L.
+AU  - Xiao, J.
+AU  - Lin, Z.
+AU  - Pang, J.
+AU  - Han, X.
+AU  - Liu, L.
+AU  - Wu, Y.
+AU  - Liu, Z.
+AU  - Chen, J.
+AU  - Zhuang, J.
+AU  - Yu, K.
+AU  - Lin, H.
+TI  - Machine learning model for predicting corneal stiffness and identifying keratoconus based on ocular structures
+PY  - 2025
+T2  - Intelligent Medicine
+VL  - 5
+IS  - 1
+SP  - 66
+EP  - 72
+DO  - 10.1016/j.imed.2024.09.006
+UR  - https://www.scopus.com/pages/publications/85215616948?origin=resultslist
+AB  - Background: Corneal stiffness abnormalities play an important role in the onset and progression of keratoconus. However, the limited availability of specialty devices for measuring corneal stiffness restricts their application in clinical practice. This study aimed to develop a machine learning (ML) model that can predict corneal stiffness based on ocular structures and investigate its efficacy in diagnosing keratoconus. Methods: This retrospective study enrolled healthy individuals and keratoconus patients at the Zhongshan Ophthalmic Center from June 2018 to June 2021. Eleven features, including ocular structural parameters, intraocular pressure (IOP), and age were used to train ML regression models for predicting the stiffness parameter at first applanation (SP-A1) and the Corvis biomechanical index for Chinese populations (cCBI) measured by a Corvis ST device. Mean absolute errors (MAEs) and the area under the receiver operating characteristic curve (AUC) were used to evaluate the performance of the models. The diagnostic efficacy of the predicted SP-A1 and cCBI for keratoconus was evaluated by the AUC, net reclassification index (NRI), and integrated discrimination improvement (IDI). Results: A total of 1,523 eyes were involved, of which 601 were diagnosed with keratoconus. The MAEs of the SP-A1 prediction were similar in cross-validation (8.95 mmHg/mm) and testing (10.65 mmHg/mm). The R2 value for the SP-A1 prediction exceeded 0.7, indicating that the performance was clinically acceptable. The AUC for the cCBI prediction was 0.935 (95% CI 0.906-0.963). The top three predictors for SP-A1 and cCBI were IOP, keratometry, and central corneal thickness. The addition of the predicted SP-A1 and cCBI significantly improved model performance in diagnosing keratoconus, with NRI of 0.607 (95% CI 0.367-0.812) and 0.188 (95% CI −0.022-0.398), and IDI of 0.028 (95% CI 0.006-0.048) and 0.045 (95% CI 0.018-0.072), respectively. Conclusion: Our models predicted SP-A1 and cCBI relatively accurately in keratoconus and normal corneas. Moreover, the predicted SP-A1 and cCBI values significantly contributed to the diagnosis of keratoconus. These models could provide a potential alternative for evaluating corneal stiffness and thus facilitate keratoconus screening. © 2024 The Author(s)
+PB  - Chinese Medical Association
+SN  - 20969376 (ISSN)
+LA  - English
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 08 September 2026
+ER  -
+
+TY  - JOUR
+AU  - Ambrósio, R.
+AU  - Machado, A.P.
+AU  - Leão, E.
+AU  - Lyra, J.M.G.
+AU  - Salomão, M.Q.
+AU  - Esporcatte, L.G.P.
+AU  - da Fonseca Filho, J.B.R.
+AU  - Ferreira-Meneses, E.
+AU  - Sena, N.B.
+AU  - Haddad, J.S.
+AU  - Costa Neto, A.
+AU  - de Almeida, G.C.
+AU  - Roberts, C.J.
+AU  - Elsheikh, A.
+AU  - Vinciguerra, R.
+AU  - Vinciguerra, P.
+AU  - Bühren, J.
+AU  - Kohnen, T.
+AU  - Kezirian, G.M.
+AU  - Hafezi, F.
+AU  - Hafezi, N.L.
+AU  - Torres-Netto, E.A.
+AU  - Lu, N.
+AU  - Kang, D.S.Y.
+AU  - Kermani, O.
+AU  - Koh, S.
+AU  - Padmanabhan, P.
+AU  - Taneri, S.
+AU  - Trattler, W.
+AU  - Gualdi, L.
+AU  - Salgado-Borges, J.
+AU  - Faria-Correia, F.
+AU  - Flockerzi, E.
+AU  - Seitz, B.
+AU  - Jhanji, V.
+AU  - Chan, T.C.Y.
+AU  - Baptista, P.M.
+AU  - Reinstein, D.Z.
+AU  - Archer, T.J.
+AU  - Rocha, K.M.
+AU  - Waring, G.O.
+AU  - Krueger, R.R.
+AU  - Dupps, W.J.
+AU  - Khoramnia, R.
+AU  - Hashemi, H.
+AU  - Asgari, S.
+AU  - Momeni-Moghaddam, H.
+AU  - Zarei-Ghanavati, S.
+AU  - Shetty, R.
+AU  - Khamar, P.
+AU  - Belin, M.W.
+AU  - Lopes, B.T.
+TI  - Optimized Artificial Intelligence for Enhanced Ectasia Detection Using Scheimpflug-Based Corneal Tomography and Biomechanical Data
+PY  - 2023
+T2  - American Journal of Ophthalmology
+VL  - 251
+SP  - 126
+EP  - 142
+DO  - 10.1016/j.ajo.2022.12.016
+UR  - https://www.scopus.com/pages/publications/85153608108?origin=resultslist
+AB  - Purpose: To optimize artificial intelligence (AI) algorithms to integrate Scheimpflug-based corneal tomography and biomechanics to enhance ectasia detection. Design: Multicenter cross-sectional case-control retrospective study. Methods: A total of 3886 unoperated eyes from 3412 patients had Pentacam and Corvis ST (Oculus Optikgeräte GmbH) examinations. The database included 1 eye randomly selected from 1680 normal patients (N) and from 1181 “bilateral” keratoconus (KC) patients, along with 551 normal topography eyes from patients with very asymmetric ectasia (VAE-NT), and their 474 unoperated ectatic (VAE-E) eyes. The current TBIv1 (tomographic-biomechanical index) was tested, and an optimized AI algorithm was developed for augmenting accuracy. Results: The area under the receiver operating characteristic curve (AUC) of the TBIv1 for discriminating clinical ectasia (KC and VAE-E) was 0.999 (98.5% sensitivity; 98.6% specificity [cutoff: 0.5]), and for VAE-NT, 0.899 (76% sensitivity; 89.1% specificity [cutoff: 0.29]). A novel random forest algorithm (TBIv2), developed with 18 features in 156 trees using 10-fold cross-validation, had a significantly higher AUC (0.945; DeLong, P <.0001) for detecting VAE-NT (84.4% sensitivity and 90.1% specificity; cutoff: 0.43; DeLong, P <.0001) and a similar AUC for clinical ectasia (0.999; DeLong, P =.818; 98.7% sensitivity; 99.2% specificity [cutoff: 0.8]). Considering all cases, the TBIv2 had a higher AUC (0.985) than TBIv1 (0.974; DeLong, P <.0001). Conclusions: AI optimization to integrate Scheimpflug-based corneal tomography and biomechanical assessments augments accuracy for ectasia detection, characterizing ectasia susceptibility in the diverse VAE-NT group. Some patients with VAE may have true unilateral ectasia. Machine learning considering additional data, including epithelial thickness or other parameters from multimodal refractive imaging, will continuously enhance accuracy. NOTE: Publication of this article is sponsored by the American Ophthalmological Society. © 2022
+PB  - Elsevier Inc.
+SN  - 00029394 (ISSN)
+LA  - English
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 08 September 2026; CODEN: AJOPA
+ER  -
+
+TY  - JOUR
+AU  - Ismael, O.
+TI  - Enhancing keratoconus detection with transformer technology and multi-source integration
+PY  - 2025
+T2  - Artificial Intelligence Review
+VL  - 58
+IS  - 1
+C7  - 22
+DO  - 10.1007/s10462-024-11016-6
+UR  - https://www.scopus.com/pages/publications/85209765211?origin=resultslist
+AB  - Keratoconus is a progressive eye disease characterized by the thinning and conical distortion of the cornea, leading to visual impairment. Early and accurate detection is essential for effective management and treatment. Traditional diagnostic methods, relying primarily on corneal topography, often fail to detect early-stage keratoconus due to their subjective nature and limited scope. In this research, we present a novel multi-source detection approach utilizing transformer technology to predict keratoconus progression more accurately. By integrating and analyzing diverse data sources, including corneal topography, aberrometry, pachymetry, and biomechanical properties, our method captures subtle changes indicative of disease progression. Transformer networks, known for their capability to model complex dependencies in data, are employed to handle the multimodal datasets effectively. Experimental results demonstrate that our approach significantly outperforms existing methods, such as SVM-based, Random Forests-based, and CNN-based models, in terms of accuracy, precision, recall, and F-score. Moreover, the proposed system exhibits lower execution times, highlighting its efficiency in clinical settings. This innovative methodology holds the potential to revolutionize keratoconus management by enabling earlier and more precise interventions, ultimately enhancing patient outcomes and contributing significantly to both the medical and machine learning communities. © The Author(s) 2024.
+PB  - Springer Nature
+SN  - 02692821 (ISSN)
+LA  - English
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 08 September 2026; CODEN: AIRVE
+ER  -
+
+TY  - JOUR
+AU  - Zhang, P.
+AU  - Yang, L.
+AU  - Mao, Y.
+AU  - Zhang, X.
+AU  - Cheng, J.
+AU  - Miao, Y.
+AU  - Bao, F.
+AU  - Chen, S.
+AU  - Zheng, Q.
+AU  - Wang, J.
+TI  - CorNet: Autonomous feature learning in raw Corvis ST data for keratoconus diagnosis via residual CNN approach
+PY  - 2024
+T2  - Computers in Biology and Medicine
+VL  - 172
+C7  - 108286
+DO  - 10.1016/j.compbiomed.2024.108286
+UR  - https://www.scopus.com/pages/publications/85187955620?origin=resultslist
+AB  - Purpose: To ascertain whether the integration of raw Corvis ST data with an end-to-end CNN can enhance the diagnosis of keratoconus (KC). Method: The Corvis ST is a non-contact device for in vivo measurement of corneal biomechanics. The CorNet was trained and validated on a dataset consisting of 1786 Corvis ST raw data from 1112 normal eyes and 674 KC eyes. Each raw data consists of the anterior and posterior corneal surface elevation during air-puff induced dynamic deformation. The architecture of CorNet utilizes four ResNet-inspired convolutional structures that employ 1 × 1 convolution in identity mapping. Gradient-weighted Class Activation Mapping (Grad-CAM) was adopted to visualize the attention allocation to diagnostic areas. Discriminative performance was assessed using metrics including the AUC of ROC curve, sensitivity, specificity, precision, accuracy, and F1 score. Results: CorNet demonstrated outstanding performance in distinguishing KC from normal eyes, achieving an AUC of 0.971 (sensitivity: 92.49%, specificity: 91.54%) in the validation set, outperforming the best existing Corvis ST parameters, namely the Corvis Biomechanical Index (CBI) with an AUC of 0.947, and its updated version for Chinese populations (cCBI) with an AUC of 0.963. Though the ROC curve analysis showed no significant difference between CorNet and cCBI (p = 0.295), it indicated a notable difference between CorNet and CBI (p = 0.011). The Grad-CAM visualizations highlighted the significance of corneal deformation data during the loading phase rather than the unloading phase for KC diagnosis. Conclusion: This study proposed an end-to-end CNN approach utilizing raw biomechanical data by Corvis ST for KC detection, showing effectiveness comparable to or surpassing existing parameters provided by Corvis ST. The CorNet, autonomously learning comprehensive temporal and spatial features, demonstrated a promising performance for advancing KC diagnosis in ophthalmology. © 2024 Elsevier Ltd
+PB  - Elsevier Ltd
+SN  - 00104825 (ISSN)
+LA  - English
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 08 September 2026; CODEN: CBMDA
+ER  -
+
+TY  - JOUR
+AU  - Castro‐luna, G.
+AU  - Jiménez‐rodríguez, D.
+AU  - Castaño‐fernández, A.B.
+AU  - Pérez‐rueda, A.
+TI  - Diagnosis of subclinical keratoconus based on machine learning techniques
+PY  - 2021
+T2  - Journal of Clinical Medicine
+VL  - 10
+IS  - 18
+C7  - 4281
+DO  - 10.3390/jcm10184281
+UR  - https://www.scopus.com/pages/publications/85115149460?origin=resultslist
+AB  - (1) Background: Keratoconus is a non‐inflammatory corneal disease characterized by gradual thinning of the stroma, resulting in irreversible visual quality and quantity decline. Early detection of keratoconus and subsequent prevention of possible risks are crucial factors in its progression. Random forest is a machine learning technique for classification based on the construction of thousands of decision trees. The aim of this study was to use the random forest technique in the classification and prediction of subclinical keratoconus, considering the metrics proposed by Pentacam and Corvis. (2) Methods: The design was a retrospective cross‐sectional study. A total of 81 eyes of 81 patients were enrolled: sixty‐one eyes with healthy corneas and twenty patients with subclinical keratoconus (SCKC): This initial stage includes patients with the following conditions: (1) minor topographic signs of keratoconus and suspicious topographic findings (mild asymmetric bow tie, with or without deviation; (2) average K (mean corneal curvature) <46, 5 D; (3) minimum corneal thickness (ECM) > 490 μm; (4) no slit lamp found; and (5) contralateral clinical keratoconus of the eye. Pentacam topographic and Corvis biomechanical variables were collected. Decision tree and random forest were used as machine learning techniques for classifications. Random forest performed a ranking of the most critical variables in classification. (3) Results: The essential variable was SP A1 (stiffness parameter A1), followed by A2 time, posterior coma 0º, A2 velocity and peak distance. The model efficiently predicted all patients with subclinical keratoconus (Sp = 93%) and was also a good model for classifying healthy cases (Sen = 86%). The overall accuracy rate of the model was 89%. (4) Conclusions: The random forest model was a good model for classifying subclinical keratoconus. The SP A1 variable was the most critical determinant in classifying and identifying subclinical keratoconus, followed by A2 time. © 2021 by the authors.
+PB  - MDPI
+SN  - 20770383 (ISSN)
+LA  - English
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 08 September 2026
+ER  -
+
+TY  - JOUR
+AU  - Du, K.
+AU  - Peng, R.
+AU  - Chen, Y.
+AU  - Yuan, B.
+AU  - Wu, H.
+AU  - Chen, T.
+AU  - Zhu, J.
+AU  - Zu, X.
+AU  - Wang, J.
+AU  - Cui, J.
+AU  - Han, L.
+AU  - Hong, J.
+TI  - Enhancing Early Keratoconus Detection With Multimodal Machine Learning: Integrating Tomography, Biomechanics, and Clinical Risk Factors
+PY  - 2025
+T2  - American Journal of Ophthalmology
+VL  - 280
+SP  - 334
+EP  - 346
+DO  - 10.1016/j.ajo.2025.08.035
+UR  - https://www.scopus.com/pages/publications/105015850368?origin=resultslist
+AB  - OBJECTIVE: To develop and validate a machine learning (ML) diagnostic system that integrates Scheimpflug tomography, corneal biomechanics, and clinical risk factors (CRF) to enhance the early detection of keratoconus (KC). DESIGN: Prospective, multicenter, cross-sectional study. PARTICIPANTS: Patients diagnosed with KC and individuals evaluated in preoperative refractive surgery clinics. METHODS: Demographic, lifestyle, and clinical ophthalmic data, including Pentacam and Corvis ST measurements, were collected from patients with KC and refractive surgery candidates across 5 centers between 2020 and 2024. The dataset was divided into training, validation, internal test, and external test sets. Least absolute shrinkage and selection operator regression was used to identify predictive variables. Six ML models were trained using 4 feature sets: CRF, device-derived parameters, combined features, and selected features. MAIN OUTCOME MEASURES: Model performance was evaluated using the area under the receiver operating characteristic curve (AUROC). RESULTS: The dataset included 1035 eyes from 1035 participants across 5 centers: 590 normal controls, 157 eyes with forme fruste keratoconus (FFKC), 143 with subclinical KC, and 145 with clinical KC. For FFKC detection, the post-feature selection CatBoost model achieved the highest accuracy (AUROC = 0.975), outperforming the combined-feature (AUROC = 0.963), CRF-only (AUROC = 0.856), and device-only models (AUROC = 0.885) in the validation set. This model also outperformed the tomographic and biomechanical index in internal (AUROC = 0.976 vs 0.813; P = .048) and external testing (AUROC = 0.952 vs 0.847; P = .012). For subclinical and clinical KC, external testing yielded near-perfect performance (AUROC = 0.991 and 1.000, respectively). CONCLUSIONS: A multimodal ML system integrating CRF, tomography, and biomechanics improved early KC detection, particularly for FFKC. This approach may enhance clinical decision-making and screening for refractive surgery candidates. © 2025 Elsevier Inc.
+PB  - Elsevier Inc.
+SN  - 00029394 (ISSN)
+LA  - English
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 08 September 2026; CODEN: AJOPA
+ER  -
+
+TY  - JOUR
+AU  - Chen, X.
+AU  - Tan, Z.
+AU  - Huo, Y.
+AU  - Song, J.
+AU  - Xu, Q.
+AU  - Yang, C.
+AU  - Jhanji, V.
+AU  - Li, J.
+AU  - Hou, J.
+AU  - Zou, H.
+AU  - Ali Khan, G.
+AU  - Alzogool, M.
+AU  - Wang, R.
+AU  - Wang, Y.
+TI  - Localized Corneal Biomechanical Alteration Detected in Early Keratoconus Based on Corneal Deformation Using Artificial Intelligence
+PY  - 2023
+T2  - Asia-Pacific Journal of Ophthalmology
+VL  - 12
+IS  - 6
+SP  - 574
+EP  - 581
+DO  - 10.1097/APO.0000000000000644
+UR  - https://www.scopus.com/pages/publications/85180932749?origin=resultslist
+AB  - Purpose: This study aimed to develop a novel method to diagnose early keratoconus by detecting localized corneal biomechanical changes based on dynamic deformation videos using machine learning. Design: Diagnostic research study. Methods: We included 917 corneal videos from the Tianjin Eye Hospital (Tianjin, China) and Shanxi Eye Hospital (Xi'an, China) from February 6, 2015, to August 25, 2022. Scheimpflug technology was used to obtain dynamic deformation videos under forced puffs of air. Fourteen new pixel-level biomechanical parameters were calculated based on a spline curve equation fitting by 115,200-pixel points from the corneal contour extracted from videos to characterize localized biomechanics. An ensemble learning model was developed, external validation was performed, and the diagnostic performance was compared with that of existing clinical diagnostic indices. The performance of the developed machine learning model was evaluated using precision, recall, F1 score, and the area under the receiver operating characteristic curve. Results: The ensemble learning model successfully diagnosed early keratoconus (area under the curve = 0.9997) with 95.73% precision, 95.61% recall, and 95.50% F1 score in the sample set (n=802). External validation on an independent dataset (n=115) achieved 91.38% precision, 92.11% recall, and 91.18% F1 score. Diagnostic accuracy was significantly better than that of existing clinical diagnostic indices (from 86.28% to 93.36%, all P<0.01). Conclusions: Localized corneal biomechanical changes detected using dynamic deformation videos combined with machine learning algorithms were useful for diagnosing early keratoconus. Focusing on localized biomechanical changes may guide ophthalmologists, aiding the timely diagnosis of early keratoconus and benefiting the patient's vision. © 2023 Asia-Pacific Academy of Ophthalmology. All rights reserved.
+PB  - Lippincott Williams and Wilkins
+SN  - 21620989 (ISSN)
+LA  - English
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 08 September 2026
+ER  -
+
+TY  - JOUR
+AU  - Forte, P.
+AU  - Feo, A.
+AU  - Koizumi, H.
+AU  - Borrelli, E.
+AU  - Manocchio, R.
+AU  - Di Cello, L.
+AU  - Biagini, F.
+AU  - Macocco, F.
+AU  - Drago, G.
+AU  - Forte, G.
+AU  - Vagge, A.
+AU  - Gianoglio, C.
+AU  - Fontana, V.
+AU  - Iester, M.
+AU  - Nicolò, M.
+AU  - Romano, M.R.
+AU  - Bonzano, C.
+TI  - Scleral Thickness in Eyes with Pachychoroid Pigment Epitheliopathy Accompanied by Keratoconus
+PY  - 2025
+T2  - Ophthalmology Science
+VL  - 5
+IS  - 5
+C7  - 100808
+DO  - 10.1016/j.xops.2025.100808
+UR  - https://www.scopus.com/pages/publications/105007302018?origin=resultslist
+AB  - Purpose: To assess the prevalence of pachychoroid pigment epitheliopathy (PPE) in eyes with keratoconus (KC) and investigate its correlation with corneal, choroidal, and scleral indices with multimodal imaging. Design: An exploratory, cross-sectional, cohort study. Subjects: One hundred consecutive patients affected with KC. Main Outcome Measures: Scleral stromal thickness, PPE prevalence, and their associations with corneal and choroidal parameters. Methods: Demographic data, corneal collagen cross-linking, anamnestic records, and clinical findings were collected. Imaging protocol included OCT (Spectralis HRA+OCT; Heidelberg Engineering), corneal topography (TMS-4N, Tomey), corneal pachymetry (RTVue-XR Avanti, Optovue), and axial length (AXL) measurement (OA-2000, Tomey). Anterior scleral stromal thickness was measured in the horizontal gaze positions 6 mm posteriorly to the scleral spur (Spectralis HRA+OCT; linear 20° scan, 1024 A-scan per second). Odds ratios (ORs) and corresponding 95% confidence limits (95% CLs) were estimated through logistic regression analysis to evaluate the association between each study parameter and PPE. To accommodate for the potential clustering effect due to within-patient correlated eye data, a generalized estimating equation procedure was applied to regression analysis. Additionally, a decision tree machine learning model with K-fold cross-validation was employed to predict PPE. Results: Eighty-five Caucasian patients were eligible for analysis (mean age: 34.2 years, standard deviation: 8.7). The prevalence of PPE was 10.5% (95% CL: 4.9/19.1%; 9/85 patients; 11/170 eyes; 2 bilateral cases). Significant predictors for PPE according to logistic regression were choroidal thickness (OR: 4.51; 95% CL: 1.50/13.6 for 50 μm increments; P = 0.007), age (OR: 4.61; 95% CL: 1.30/16.4 for 10-year increments; P = 0.018), and scleral stromal thickness (OR: 7.48: 95% CL: 1.69/33.1 for 25 μm increments; P = 0.008). Sex, AXL, corneal curvature, and astigmatism parameters did not show significant discriminant ability (P > 0.05). Collagen cross-linking treatment was performed in a comparable proportion between the 2 groups (73.6% vs. 63.4% in PPE and non-PPE, respectively). Conclusions: Our study identifies increased scleral thickness as the key predictor of PPE in KC patients, followed by choroidal thickening and increased age. These findings provide new insights into the role of scleral biomechanics in KC eyes with PPE. Financial Disclosure(s): The author(s) have no proprietary or commercial interest in any materials discussed in this article. © 2025 American Academy of Ophthalmology
+PB  - Elsevier Inc.
+SN  - 26669145 (ISSN)
+LA  - English
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 08 September 2026
+ER  -
+
+TY  - JOUR
+AU  - Lu, N.-J.
+AU  - Hafezi, F.
+AU  - Torres-Netto, E.A.
+AU  - Assaf, J.F.
+AU  - Aslanides, I.M.
+AU  - Awwad, S.T.
+AU  - Chen, S.
+AU  - Cui, L.-L.
+AU  - Koppen, C.
+TI  - Effect of fluence levels on prophylactic corneal cross-linking for laser in situ keratomileusis and transepithelial photorefractive keratectomy
+PY  - 2023
+T2  - Acta Ophthalmologica
+VL  - 101
+IS  - 2
+SP  - e185
+EP  - e196
+DO  - 10.1111/aos.15230
+UR  - https://www.scopus.com/pages/publications/85135535179?origin=resultslist
+AB  - Purpose: The purpose of this study is to assess the effect of various fluence levels on prophylactic corneal cross-linking (CXL) combined with femtosecond laser in situ keratomileusis (FS-LASIK-Xtra) or transepithelial photorefractive keratectomy (TransPRK-Xtra) on biomechanics, demarcation line (DL), and stromal haze. Methods: Prospective analysis where two prophylactic CXL protocols (lower/higher fluence [LF/HF]: 30 mw/cm2, 60/80 s, 1.8/2.4 J/cm2) were performed as part of either an FS-LASIK-Xtra or TransPRK-Xtra procedure. Data were collected preoperatively and at 1 week and 1, 3, and 6 months postoperatively. Main outcome measures were (1) dynamic corneal response parameters and the stress–strain index (SSI) from Corvis, (2) actual DL depth (ADL), and (3) stromal haze on OCT images analysed by a machine learning algorithm. Results: Eighty-six eyes from 86 patients underwent FS-LASIK-Xtra-HF (21 eyes), FS-LASIK-Xtra-LF (21 eyes), TransPRK-Xtra-HF (23 eyes), and TransPRK-Xtra-LF (21 eyes). SSI increased similarly by around 15% in all groups 6 months postoperatively (p = 0.155). All other corneal biomechanical parameters were statistically significant worsening postoperatively, but the change was similar in all groups. At 1 month postoperatively, there was no statistical difference in mean ADL among four groups (p = 0.613), mean stromal haze was similar between the two FS-LASIK-Xtra groups, but higher in the TransPRK-Xtra-HF group compared with the TransPRK-Xtra-LF group. Conclusions: FS-LASIK-Xtra and TransPRK-Xtra lead to a similar ADL and improve SSI equally. Lower fluence prophylactic CXL might be recommended as it achieves similar mean ADL with potentially less induced stromal haze, especially in TransPRK. The clinical relevance and applicability of such protocols remains to be assessed. © 2022 Acta Ophthalmologica Scandinavica Foundation. Published by John Wiley & Sons Ltd.
+PB  - John Wiley and Sons Inc
+SN  - 1755375X (ISSN)
+LA  - English
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 08 September 2026
+ER  -
+
+TY  - JOUR
+AU  - Kuo, B.-I.
+AU  - Chang, W.-Y.
+AU  - Liao, T.-S.
+AU  - Liu, F.-Y.
+AU  - Liu, H.-Y.
+AU  - Chu, H.-S.
+AU  - Chen, W.-L.
+AU  - Hu, F.-R.
+AU  - Yen, J.-Y.
+AU  - Wang, I.-J.
+TI  - Keratoconus screening based on deep learning approach of corneal topography
+PY  - 2020
+T2  - Translational Vision Science and Technology
+VL  - 9
+IS  - 2
+C7  - 53
+SP  - 1
+EP  - 11
+DO  - 10.1167/tvst.9.2.53
+UR  - https://www.scopus.com/pages/publications/85097437188?origin=resultslist
+AB  - Purpose: To develop and compare deep learning (DL) algorithms to detect keratoconus on the basis of corneal topography and validate with visualization methods. Methods: We retrospectively collected corneal topographies of the study group with clinically manifested keratoconus and the control group with regular astigmatism. All images were divided into training and test datasets. We adopted three convolutional neural network (CNN) models for learning. The test dataset was applied to analyze the performance of the three models. In addition, for better discrimination and understanding, we displayed the pixel-wise discriminative features and class-discriminative heat map of diopter images for visualization. Results: Overall, 170 keratoconus, 28 subclinical keratoconus and 156 normal topographic pictures were collected. The convergence of accuracy and loss for the training and test datasets after training revealed no overfitting in all three CNN models. The sensitivity and specificity of all CNN models were over 0.90, and the area under the receiver operating characteristic curve reached 0.995 in the ResNet152 model. The pixel-wise discriminative features and the heat map of the prediction layer in the VGG16 model both revealed it focused on the largest gradient difference of topographic maps, which was corresponding to the diagnostic clues of ophthalmologists. The subclinical keratoconus was positively predicted with our model and also correlated with topographic indexes. Conclusions: The DL models had fair accuracy for keratoconus screening based on corneal topographic images. The visualization mentioned in the current study revealed that the model focused on the appropriate region for diagnosis and rendered clinical explainability of deep learning more acceptable. Translational Relevance: These high accuracy CNN models can aid ophthalmologists in keratoconus screening with color-coded corneal topography maps. © 2020, Association for Research in Vision and Ophthalmology Inc. All rights reserved.
+PB  - Association for Research in Vision and Ophthalmology Inc.
+SN  - 21642591 (ISSN)
+LA  - English
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 08 September 2026
+ER  -
+
+TY  - JOUR
+AU  - Luo, S.
+AU  - Lin, K.
+AU  - Li, X.
+AU  - He, L.
+AU  - Elsheikh, A.
+AU  - Bao, F.
+AU  - Shen, M.
+AU  - Chen, S.
+AU  - Lu, F.
+AU  - Wang, J.
+TI  - Texture-based Analysis of Corneal Dynamics for the Detection of Forme Fruste Keratoconus
+PY  - 2026
+T2  - Journal of Refractive Surgery
+VL  - 42
+IS  - 2
+SP  - e141
+EP  - e150
+DO  - 10.3928/1081597X-20251125-02
+UR  - https://www.scopus.com/pages/publications/105029779525?origin=resultslist
+AB  - PURPOSE: To propose CVS-omics, a radiomics framework using Corvis ST (CVS) (Oculus Optikgeräte GmbH) imaging and machine learning, for precise identification of forme fruste keratoconus (FFKC), a subtle corneal condition often undetected by conventional diagnostics. METHODS: A total of 410 eyes were evaluated, including 265 normal eyes and 145 FFKC eyes. Texture features through radiomics were extracted from CVS images acquired at three key deformation phases: initial state, first applanation, and maximum deformation. These features were used to train three machine learning models (Random Forest [Minitab, Inc], C5.0 [RuleQuest Research], and XGBoost (extreme Gradient Boosting) on 328 eyes, with testing conducted on 82 eyes. Diagnostic performance was evaluated using receiver operating characteristic (ROC) analysis and compared with conventional biomechanical parameters. RESULTS: The CVS-omics Random Forest model achieved superior diagnostic performance (area under the curve (AUC) = 0.989, sensitivity = 0.931, specificity = 0.962, accuracy = 0.951), significantly outperforming traditional CVS parameters (best AUC = 0.764). Models trained on features from three deformation phases showed higher diagnostic accuracy than those based on a single phase. Other models demonstrated high generalizability of dynamic radiomics features (XGBoost and C5.0 AUC > 0.83). CONCLUSIONS: CVS-omics effectively detects subtle characteristic alterations in FFKC eyes with superior accuracy compared to conventional biomechanical parameters. This texture feature approach shows promise as a non-invasive clinical tool for FFKC detection and timely intervention. © 2026, Slack Incorporated. All rights reserved.
+PB  - Slack Incorporated
+SN  - 1081597X (ISSN)
+LA  - English
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 08 September 2026; CODEN: JRSUF
+ER  -
+
