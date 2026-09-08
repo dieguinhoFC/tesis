@@ -1,4 +1,4 @@
-. 
+.
 
 # Árbol de Problemas: Detección de Queratocono con OCE
 
@@ -7,21 +7,22 @@
 ```mermaid
 graph BT
     %% Definición de nodos de Raíces (Causas)
-    C1["<b>Limitación de parámetros topográficos:</b><br/>La topografía describe únicamente cambios morfológicos<br/>y geométricos, sin proporcionar información directa<br/>sobre la rigidez corneal temprana."]
+    C1["<b>Complejidad para procesar y analizar de forma analítica múltiples mapas espacio-tiempo por cada ojo de manera escalable</b><br/> Para capturar cómo varía la rigidez en diferentes direcciones de la córnea, el sistema adquiere mapas de velocidad de onda en múltiples meridianos radiales por cada ojo. Procesar cada uno de estos mapas de forma tradicional requiere mucho tiempo, es propenso a errores y se vuelve inviable a medida que la cantidad de pacientes y datos de tu estudio sigue creciendo."]
   
-    C2["<b>Cuello de botella en el procesamiento analítico:</b><br/>Calcular la rigidez corneal a partir de los datos brutos<br/>de OCE requiere aplicar transformadas matemáticas (FFT-2D)<br/>y ajustes a modelos físicos complejos (mRLFE)."]
+    C2["<b>Complejidad del cálculo matemático para obtener la rigidez de la córnea:</b><br/>Calcular el módulo de rigidez a partir de las velocidades medidas exige resolver de forma repetida ecuaciones físicas complejas, como el modelo Rayleigh-Lamb, para ajustar las curvas de velocidad registradas. Este procesamiento analítico tradicional es muy lento, requiere un gran esfuerzo de cómputo y detiene el flujo de trabajo rápido que necesita una consulta médica."]
   
-    C3["<b>Complejidad de la clasificación biomecánica:</b><br/>Las sutiles diferencias de rigidez entre estadios<br/>(subclínico vs normal) son difíciles de aislar y<br/>clasificar de forma masiva mediante métodos manuales."]
+    C3["<b>Sutileza y solapamiento biomecánico entre el estado normal y el subclínico:</b><br/>Las variaciones físicas en la velocidad de propagación de las ondas y la rigidez de una córnea sana frente a una en etapa subclínica son mínimas y suelen solaparse estadísticamente. Esta estrecha diferencia hace que los estadios tempranos de la enfermedad sean muy difíciles de interpretar y clasificar visualmente o mediante umbrales matemáticos tradicionales directos."]
 
     %% Nodo del Problema Central
-    PR((("<b>PROBLEMA RAÍZ:</b><br/>La extracción manual y el análisis matemático de<br/>características en los mapas espacio-tiempo de<br/>velocidad de onda (OCE) hacen que la clasificación<br/>del queratocono sea un proceso lento y complejo.")))
+    PR((("<b>PROBLEMA RAÍZ:</b><br/>El cálculo matemático de la rigidez corneal a partir de las velocidades de onda medidas es lento y complejo, lo que posterga el diagnóstico del estado corneal del paciente, impidiendo identificar a tiempo si es una córnea normal, subclínica o con queratocono clínico.")))
 
     %% Definición de nodos de Ramas (Efectos)
-    E1["<b>Inviabilidad clínica:</b><br/>Una técnica tan precisa como la OCE se queda atrapada<br/>en el laboratorio porque no es lo suficientemente rápida<br/>o automática para usarse en las clínicas oftalmológicas."]
+    E1["<b> Inviabilidad del uso clínico de la tecnología </b><br/> A pesar de que la elastografía por coherencia óptica es una técnica sumamente precisa para medir la biomecánica, se mantiene limitada al ámbito de laboratorio. Los médicos no pueden adoptar un sistema que requiere demasiado tiempo de procesamiento para evaluar a un solo paciente."]
   
-    E2["<b>Riesgo de errores humanos:</b><br/>Al depender de la observación manual de la gráfica<br/>espacio-tiempo, puede haber sesgos o errores en la<br/>clasificación de los casos limítrofes (subclínicos)."]
+    E2["<b>Pérdida de la ventana de tratamiento y complicaciones visuales graves:</b><br/>Al no disponer de una clasificación inmediata, los pacientes en estadios iniciales (subclínicos) no reciben terapias oportunas como el crosslinking para frenar el avance de la enfermedad. Además, corren el riesgo de ser sometidos por error a cirugías refractivas con láser, lo que debilita aún más la córnea de forma irreversible."]
   
-    E3["<b>Retraso en el diagnóstico:</b><br/>Si el médico no tiene el resultado rápido, se pierde<br/>la oportunidad de aplicar un tratamiento oportuno<br/>para detener el avance de la enfermedad."]
+    E3["<b>Alta tasa de falsos negativos y subdiagnóstico de la enfermedad en fases tempranas.:</b><br/>Provoca que un alto porcentaje de pacientes con queratocono subclínico sean catalogados erróneamente como sanos, permitiendo que la deformación progrese de manera silenciosa hacia un daño visual irreversible
+."]
 
     %% Conexiones Raíces -> Problema Central
     C1 --> PR
